@@ -12,11 +12,11 @@ import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.v
 
 <BaseLayout title="المتجر - نفحة NAFHA">
   <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
-    <CommonHeader client:load />
+    <CommonHeader />
     
     <main class="flex-1">
       <!-- Hero Section -->
-      <CollectionsHero client:load />
+      <CollectionsHero />
       
       <!-- Trust Icon Bar -->
       <section class="py-8 md:py-12 bg-card border-b border-border/20">
@@ -36,7 +36,7 @@ import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.v
               اختر من بين أربع فئات رئيسية من منتجات العود والبخور الفاخرة
             </p>
           </div>
-          <CategoryGrid client:idle />
+          <CategoryGrid />
         </div>
       </section>
       
@@ -51,12 +51,12 @@ import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.v
               اكتشف أفضل اختياراتنا من العملاء والمتخصصين
             </p>
           </div>
-          <FeaturedProducts client:idle />
+          <FeaturedProducts />
         </div>
       </section>
     </main>
     
     <CommonFooter variant="complex" />
-    <WhatsAppFloatingButton client:load />
+    <WhatsAppFloatingButton />
   </div>
 </BaseLayout>
