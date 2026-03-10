@@ -47,14 +47,6 @@ const faqs = getFaqsByCategory(props.category, 3)
         </Button>
       </div>
       
-<!-- First FAQ Trigger (Moved Outside) -->
-      <AccordionTrigger 
-        v-if="faqs.length > 0"
-        class="text-lg font-semibold text-foreground hover:text-primary transition-colors py-4"
-      >
-        {{ faqs[0].question_ar }}
-      </AccordionTrigger>
-      
       <!-- FAQ Accordion -->
       <div class="max-w-3xl">
         <Accordion type="single" collapsible class="w-full">
@@ -64,7 +56,7 @@ const faqs = getFaqsByCategory(props.category, 3)
             :value="`faq-${index}`"
             class="border-b border-border/20"
           >
-            <AccordionTrigger v-if="index > 0" class="text-lg font-semibold text-foreground hover:text-primary transition-colors py-4">
+            <AccordionTrigger class="text-lg font-semibold text-foreground hover:text-primary transition-colors py-4">
               {{ faq.question_ar }}
             </AccordionTrigger>
             <AccordionContent class="text-muted-foreground leading-relaxed pb-4">

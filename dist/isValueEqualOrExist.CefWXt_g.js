@@ -1,0 +1,1 @@
+import{i as isNullish}from"./Presence.Ct-ioW9q.js";import{i as isEqual}from"./useDirection.DFH7kFwg.js";function isValueEqualOrExist(base,current){return isNullish(base)?!1:Array.isArray(base)?base.some(val=>isEqual(val,current)):isEqual(base,current)}export{isValueEqualOrExist as i};

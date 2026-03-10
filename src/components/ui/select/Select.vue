@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { PrimitiveProps } from "reka-ui"
-import { Select as SelectPrimitive } from "reka-ui"
+import { SelectRoot as SelectPrimitive } from 'reka-ui' 
 
 interface Props extends PrimitiveProps {}
 
