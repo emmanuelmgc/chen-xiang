@@ -1,0 +1,80 @@
+
+/* Product Detail Page Specific Styles */
+
+@layer components {
+  /* Image Gallery Zoom Effect */
+  .product-image-zoom {
+    transition: transform 0.3s ease;
+  }
+
+  .product-image-zoom.zoomed {
+    transform: scale(1.5);
+  }
+
+  /* Specs Table RTL Support */
+  [dir="rtl"] .specs-table {
+    direction: rtl;
+  }
+
+  /* Certificate Modal */
+  .certificate-modal {
+    @apply rounded-xl;
+  }
+
+  /* How to Use Steps Connector */
+  @media (min-width: 768px) {
+    .how-to-use-steps {
+      position: relative;
+    }
+
+    .how-to-use-steps::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      right: 50%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, hsl(var(--border)), transparent);
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Safety Notice Alert */
+  .safety-notice {
+    @apply border-l-4 border-destructive;
+  }
+
+  /* Related Products Carousel */
+  .related-products-carousel {
+    @apply overflow-x-auto custom-scrollbar;
+  }
+
+  /* CTA Bar Sticky */
+  .cta-bar-sticky {
+    @apply sticky bottom-0 z-40 bg-background/95 backdrop-blur-sm border-t border-border/30;
+  }
+
+  /* Product Badge Styles */
+  .product-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold;
+  }
+
+  /* Hover Effects */
+  .product-image-container:hover img {
+    @apply scale-105;
+  }
+
+  .product-card:hover {
+    @apply shadow-card;
+  }
+
+  /* RTL Adjustments */
+  [dir="rtl"] .chevron-icon {
+    transform: scaleX(-1);
+  }
+
+  /* Accessibility */
+  .product-detail-page *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+}

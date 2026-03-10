@@ -1,0 +1,50 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import BakhoorHero from '@/components/bakhoor-category/BakhoorHero.vue'
+import BakhoorUSPCards from '@/components/bakhoor-category/BakhoorUSPCards.vue'
+import BakhoorProductGrid from '@/components/bakhoor-category/BakhoorProductGrid.vue'
+import BakhoorFAQSection from '@/components/bakhoor-category/BakhoorFAQSection.vue'
+import TrustIconBar from '@/components/common/TrustIconBar.vue'
+import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
+
+const pageTitle = 'البخور ورقائق العود | نفحة NAFHA'
+const pageDescription = 'استكشف مجموعة البخور الفاخرة من نفحة - رقائق عود أصيلة للضيافة التقليدية والمناسبات الخاصة'
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
+    <!-- Header -->
+    <CommonHeader client:load />
+
+    <!-- Main Content -->
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <BakhoorHero client:load />
+
+      <!-- Trust Icon Bar -->
+      <section class="py-8 md:py-12 bg-card border-b border-border/20">
+        <div class="container mx-auto px-4">
+          <TrustIconBar />
+        </div>
+      </section>
+
+      <!-- USP Cards Section -->
+      <BakhoorUSPCards client:idle />
+
+      <!-- Product Grid Section -->
+      <BakhoorProductGrid client:idle />
+
+      <!-- FAQ Section -->
+      <BakhoorFAQSection client:idle />
+    </main>
+
+    <!-- Footer -->
+    <CommonFooter client:load variant="complex" />
+
+    <!-- WhatsApp Floating Button -->
+    <WhatsAppFloatingButton client:load phoneNumber="966500000000" message="مرحباً، أود الاستفسار عن منتجات البخور" />
+  </div>
+</BaseLayout>

@@ -1,0 +1,50 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import BreadcrumbNav from '@/components/common/BreadcrumbNav.vue'
+import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
+import OurStoryHero from '@/components/our-story/OurStoryHero.vue'
+import BrandStorySection from '@/components/our-story/BrandStorySection.vue'
+import BrandValuesGrid from '@/components/our-story/BrandValuesGrid.vue'
+import ProcessStepsTimeline from '@/components/our-story/ProcessStepsTimeline.vue'
+import CTASection from '@/components/our-story/CTASection.vue'
+
+const breadcrumbItems = [
+  { label: 'الرئيسية', href: './collections.html' },
+  { label: 'من نحن', href: './about.html' },
+  { label: 'قصتنا', href: './our-story.html' },
+]
+---
+
+<BaseLayout title="قصتنا - نفحة NAFHA">
+  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:load />
+    
+    <main class="flex-1">
+      <!-- Breadcrumb -->
+      <div class="container mx-auto px-4 py-6">
+        <BreadcrumbNav items={breadcrumbItems} />
+      </div>
+
+      <!-- Hero Section -->
+      <OurStoryHero client:load />
+
+      <!-- Brand Story Section -->
+      <BrandStorySection client:load />
+
+      <!-- Brand Values Grid -->
+      <BrandValuesGrid client:load />
+
+      <!-- Process Steps Timeline -->
+      <ProcessStepsTimeline client:load />
+
+      <!-- CTA Section -->
+      <CTASection client:load />
+    </main>
+
+    <CommonFooter variant="complex" />
+    <WhatsAppFloatingButton client:idle />
+  </div>
+</BaseLayout>

@@ -1,0 +1,96 @@
+
+/* Page-specific styles for sourcing-craft page */
+/* All styles use design tokens from global.css */
+
+@layer components {
+  /* Smooth scroll behavior for anchor links */
+  .sourcing-craft-page {
+    scroll-behavior: smooth;
+  }
+
+  /* Image hover effect for process cards */
+  .process-image-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .process-image-container img {
+    transition: transform 0.3s ease;
+  }
+
+  .process-image-container:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Accordion animation */
+  [data-state="open"] {
+    animation: slideDown 0.3s ease-out;
+  }
+
+  [data-state="closed"] {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Staggered animation for process steps */
+  .process-step-1 {
+    animation-delay: 0ms;
+  }
+
+  .process-step-2 {
+    animation-delay: 150ms;
+  }
+
+  .process-step-3 {
+    animation-delay: 300ms;
+  }
+
+  .process-step-4 {
+    animation-delay: 450ms;
+  }
+
+  /* RTL-specific adjustments */
+  [dir="rtl"] .process-step-card {
+    text-align: right;
+  }
+
+  [dir="rtl"] .certification-grid {
+    direction: rtl;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .sourcing-hero {
+      min-height: 300px;
+    }
+
+    .process-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .certification-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

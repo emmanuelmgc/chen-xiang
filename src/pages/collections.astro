@@ -1,0 +1,62 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import CollectionsHero from '@/components/collections/CollectionsHero.vue'
+import TrustIconBar from '@/components/common/TrustIconBar.vue'
+import CategoryGrid from '@/components/collections/CategoryGrid.vue'
+import FeaturedProducts from '@/components/collections/FeaturedProducts.vue'
+import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
+---
+
+<BaseLayout title="المتجر - نفحة NAFHA">
+  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:load />
+    
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <CollectionsHero client:load />
+      
+      <!-- Trust Icon Bar -->
+      <section class="py-8 md:py-12 bg-card border-b border-border/20">
+        <div class="container mx-auto px-4">
+          <TrustIconBar />
+        </div>
+      </section>
+      
+      <!-- Category Grid -->
+      <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+          <div class="mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-2">
+              استكشف مجموعاتنا
+            </h2>
+            <p class="text-lg text-muted-foreground">
+              اختر من بين أربع فئات رئيسية من منتجات العود والبخور الفاخرة
+            </p>
+          </div>
+          <CategoryGrid client:idle />
+        </div>
+      </section>
+      
+      <!-- Featured Products -->
+      <section class="py-12 md:py-16 bg-card/50">
+        <div class="container mx-auto px-4">
+          <div class="mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-2">
+              المنتجات المميزة
+            </h2>
+            <p class="text-lg text-muted-foreground">
+              اكتشف أفضل اختياراتنا من العملاء والمتخصصين
+            </p>
+          </div>
+          <FeaturedProducts client:idle />
+        </div>
+      </section>
+    </main>
+    
+    <CommonFooter variant="complex" />
+    <WhatsAppFloatingButton client:load />
+  </div>
+</BaseLayout>

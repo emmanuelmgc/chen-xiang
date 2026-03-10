@@ -1,0 +1,36 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import AboutHero from '@/components/about/AboutHero.vue'
+import BrandClaimSection from '@/components/about/BrandClaimSection.vue'
+import BrandStorySection from '@/components/about/BrandStorySection.vue'
+import BrandValuesGrid from '@/components/about/BrandValuesGrid.vue'
+import CallToActionSection from '@/components/about/CallToActionSection.vue'
+---
+
+<BaseLayout title="عن نفحة NAFHA - قصتنا وقيمنا">
+  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:load />
+    
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <AboutHero client:idle />
+      
+      <!-- Brand Claim Section -->
+      <BrandClaimSection client:idle />
+      
+      <!-- Brand Story Section -->
+      <BrandStorySection client:idle />
+      
+      <!-- Brand Values Grid -->
+      <BrandValuesGrid client:idle />
+      
+      <!-- Call to Action Section -->
+      <CallToActionSection client:idle />
+    </main>
+    
+    <CommonFooter client:load variant="complex" />
+  </div>
+</BaseLayout>
