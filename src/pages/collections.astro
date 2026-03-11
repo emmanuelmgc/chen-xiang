@@ -1,4 +1,3 @@
-
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import CommonHeader from '@/components/common/CommonHeader.vue'
@@ -12,20 +11,17 @@ import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.v
 
 <BaseLayout title="المتجر - نفحة NAFHA">
   <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
-    <CommonHeader />
-    
+    <CommonHeader client:only="vue" />
+
     <main class="flex-1">
-      <!-- Hero Section -->
-      <CollectionsHero />
-      
-      <!-- Trust Icon Bar -->
+      <CollectionsHero client:only="vue" />
+
       <section class="py-8 md:py-12 bg-card border-b border-border/20">
         <div class="container mx-auto px-4">
           <TrustIconBar />
         </div>
       </section>
-      
-      <!-- Category Grid -->
+
       <section class="py-12 md:py-16">
         <div class="container mx-auto px-4">
           <div class="mb-8">
@@ -36,11 +32,10 @@ import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.v
               اختر من بين أربع فئات رئيسية من منتجات العود والبخور الفاخرة
             </p>
           </div>
-          <CategoryGrid />
+          <CategoryGrid client:only="vue" />
         </div>
       </section>
-      
-      <!-- Featured Products -->
+
       <section class="py-12 md:py-16 bg-card/50">
         <div class="container mx-auto px-4">
           <div class="mb-8">
@@ -51,12 +46,12 @@ import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.v
               اكتشف أفضل اختياراتنا من العملاء والمتخصصين
             </p>
           </div>
-          <FeaturedProducts />
+          <FeaturedProducts client:only="vue" />
         </div>
       </section>
     </main>
-    
+
     <CommonFooter variant="complex" />
-    <WhatsAppFloatingButton />
+    <WhatsAppFloatingButton client:only="vue" />
   </div>
 </BaseLayout>
