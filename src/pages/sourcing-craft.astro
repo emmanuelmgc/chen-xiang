@@ -1,0 +1,70 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
+import SourcingHero from '@/components/sourcing-craft/SourcingHero.vue'
+import SourcingMap from '@/components/sourcing-craft/SourcingMap.vue'
+import ProcessTimeline from '@/components/sourcing-craft/ProcessTimeline.vue'
+import MaterialExplanation from '@/components/sourcing-craft/MaterialExplanation.vue'
+import QualityPromiseSection from '@/components/sourcing-craft/QualityPromiseSection.vue'
+import SourcingCTA from '@/components/sourcing-craft/SourcingCTA.vue'
+---
+
+<BaseLayout title="المصدر والحرفة | نفحة NAFHA">
+  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:load />
+    
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <SourcingHero client:idle />
+      
+      <!-- Sourcing Map Section -->
+      <section class="py-12 md:py-20 bg-background">
+        <div class="container mx-auto px-4">
+          <SourcingMap client:idle />
+        </div>
+      </section>
+      
+      <!-- Process Timeline Section -->
+      <section class="py-12 md:py-20 bg-card/50">
+        <div class="container mx-auto px-4">
+          <div class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              عملية الإنتاج المتقنة
+            </h2>
+            <p class="text-lg text-muted-foreground max-w-2xl">
+              نتابع معايير صارمة في كل مرحلة من مراحل الإنتاج لضمان أعلى جودة وأنظف احتراق
+            </p>
+          </div>
+          <ProcessTimeline client:idle />
+        </div>
+      </section>
+      
+      <!-- Material Explanation Section -->
+      <section class="py-12 md:py-20 bg-background">
+        <div class="container mx-auto px-4">
+          <MaterialExplanation client:idle />
+        </div>
+      </section>
+      
+      <!-- Quality Promise Section -->
+      <section class="py-12 md:py-20 bg-card/50">
+        <div class="container mx-auto px-4">
+          <QualityPromiseSection client:idle />
+        </div>
+      </section>
+      
+      <!-- CTA Section -->
+      <section class="py-12 md:py-20 bg-background">
+        <div class="container mx-auto px-4">
+          <SourcingCTA client:idle />
+        </div>
+      </section>
+    </main>
+    
+    <CommonFooter variant="complex" />
+    <WhatsAppFloatingButton client:load />
+  </div>
+</BaseLayout>

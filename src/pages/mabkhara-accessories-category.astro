@@ -1,0 +1,34 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
+import HeroSection from '@/components/mabkhara-accessories-category/HeroSection.vue'
+import USPSection from '@/components/mabkhara-accessories-category/USPSection.vue'
+import ProductGrid from '@/components/mabkhara-accessories-category/ProductGrid.vue'
+import FAQSection from '@/components/mabkhara-accessories-category/FAQSection.vue'
+---
+
+<BaseLayout title="المباخر والملحقات | نفحة NAFHA">
+  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:load />
+    
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <HeroSection client:load />
+      
+      <!-- USP Section -->
+      <USPSection client:idle />
+      
+      <!-- Product Grid Section -->
+      <ProductGrid client:idle />
+      
+      <!-- FAQ Section -->
+      <FAQSection client:idle />
+    </main>
+    
+    <CommonFooter variant="complex" />
+    <WhatsAppFloatingButton client:load />
+  </div>
+</BaseLayout>

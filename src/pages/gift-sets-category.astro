@@ -1,0 +1,54 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import GiftSetsCategoryHero from '@/components/gift-sets-category/GiftSetsCategoryHero.vue'
+import ValuePropositionCards from '@/components/gift-sets-category/ValuePropositionCards.vue'
+import ProductGrid from '@/components/gift-sets-category/ProductGrid.vue'
+import FAQSection from '@/components/gift-sets-category/FAQSection.vue'
+import TrustBar from '@/components/gift-sets-category/TrustBar.vue'
+import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
+---
+
+<BaseLayout title="مجموعات الهدايا - نفحة NAFHA">
+  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:load />
+    
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <GiftSetsCategoryHero client:load />
+      
+      <!-- Trust Bar -->
+      <section class="py-8 md:py-12 bg-background border-b border-border/20">
+        <div class="container mx-auto px-4">
+          <TrustBar client:idle />
+        </div>
+      </section>
+      
+      <!-- Value Proposition -->
+      <section class="py-12 md:py-16 bg-background">
+        <div class="container mx-auto px-4">
+          <ValuePropositionCards client:idle />
+        </div>
+      </section>
+      
+      <!-- Product Grid -->
+      <section class="py-12 md:py-16 bg-background">
+        <div class="container mx-auto px-4">
+          <ProductGrid client:idle />
+        </div>
+      </section>
+      
+      <!-- FAQ Section -->
+      <section class="py-12 md:py-16 bg-background/50">
+        <div class="container mx-auto px-4">
+          <FAQSection client:idle />
+        </div>
+      </section>
+    </main>
+    
+    <CommonFooter client:load variant="complex" />
+    <WhatsAppFloatingButton client:load />
+  </div>
+</BaseLayout>

@@ -1,0 +1,88 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import BreadcrumbNav from '@/components/common/BreadcrumbNav.vue'
+import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
+import ProductHero from '@/components/product-detail/ProductHero.vue'
+import ProductInfo from '@/components/product-detail/ProductInfo.vue'
+import ProductSpecs from '@/components/product-detail/ProductSpecs.vue'
+import SourcingCard from '@/components/product-detail/SourcingCard.vue'
+import CertificateSection from '@/components/product-detail/CertificateSection.vue'
+import HowToUseSteps from '@/components/product-detail/HowToUseSteps.vue'
+import SafetyNotice from '@/components/product-detail/SafetyNotice.vue'
+import RelatedProducts from '@/components/product-detail/RelatedProducts.vue'
+import CTABar from '@/components/product-detail/CTABar.vue'
+import { getProductById } from '@/data/products'
+
+// 默认产品 ID（SSG 编译时常量）
+const DEFAULT_PRODUCT_ID = 'stick_sandal_classic'
+const product = getProductById(DEFAULT_PRODUCT_ID)
+
+if (!product) {
+  return Astro.redirect('./collections.html')
+}
+
+const breadcrumbs = [
+  { label: 'الرئيسية', href: './collections.html' },
+  { label: 'المتجر', href: './collections.html' },
+  { label: product.name_ar }
+]
+---
+
+<BaseLayout title={`${product.name_ar} | نفحة NAFHA`}>
+  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:load />
+    
+    <main class="flex-1 container mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <div class="mb-8">
+        <BreadcrumbNav items={breadcrumbs} />
+      </div>
+
+      <!-- Product Hero (Image Gallery + Quick Info) -->
+      <ProductHero client:load product={product} />
+
+      <!-- Product Info (Name, Description, Tags) -->
+      <ProductInfo client:idle product={product} />
+
+      <!-- Product Specs Table -->
+      <ProductSpecs client:idle product={product} />
+
+      <!-- Sourcing Card -->
+      <SourcingCard client:idle product={product} />
+
+      <!-- Certificate Section -->
+      <CertificateSection client:idle product={product} />
+
+      <!-- How to Use Steps -->
+      <HowToUseSteps client:idle product={product} />
+
+      <!-- Safety Notice -->
+      <SafetyNotice client:idle product={product} />
+
+      <!-- Related Products -->
+      <RelatedProducts client:idle relatedIds={product.relatedProductsIds} />
+    </main>
+
+    <!-- Sticky CTA Bar -->
+    <CTABar client:load product={product} />
+
+    <!-- WhatsApp Floating Button -->
+    <WhatsAppFloatingButton client:load />
+
+    <!-- Footer -->
+    <CommonFooter variant="simple" />
+  </div>
+</BaseLayout>
+
+<style>
+  :global(html[dir="rtl"]) {
+    direction: rtl;
+  }
+  
+  :global(html[dir="ltr"]) {
+    direction: ltr;
+  }
+</style>

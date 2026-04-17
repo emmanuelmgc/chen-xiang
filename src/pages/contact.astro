@@ -1,0 +1,100 @@
+
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import ContactHero from '@/components/contact/ContactHero.vue'
+import ContactMethodCard from '@/components/contact/ContactMethodCard.vue'
+import ContactForm from '@/components/contact/ContactForm.vue'
+import CompanyInfo from '@/components/contact/CompanyInfo.vue'
+import SocialLinks from '@/components/contact/SocialLinks.vue'
+import TrustIconBar from '@/components/common/TrustIconBar.vue'
+import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
+---
+
+<BaseLayout title="اتصل بنا - نفحة NAFHA">
+  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:load />
+    
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <ContactHero client:idle />
+      
+      <!-- Trust Bar -->
+      <section class="py-8 md:py-12 border-b border-border/20">
+        <div class="container mx-auto px-4">
+          <TrustIconBar />
+        </div>
+      </section>
+      
+      <!-- Contact Methods Grid -->
+      <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <ContactMethodCard 
+              client:idle
+              type="whatsapp"
+              title="واتساب"
+              subtitle="الرد السريع"
+              description="تواصل معنا عبر واتساب للحصول على إجابات فورية"
+            />
+            <ContactMethodCard 
+              client:idle
+              type="phone"
+              title="الهاتف"
+              subtitle="اتصل بنا مباشرة"
+              description="اتصل بفريقنا خلال ساعات العمل"
+            />
+            <ContactMethodCard 
+              client:idle
+              type="email"
+              title="البريد الإلكتروني"
+              subtitle="الاستفسارات المفصلة"
+              description="أرسل لنا بريداً إلكترونياً مع تفاصيل احتياجاتك"
+            />
+          </div>
+        </div>
+      </section>
+      
+      <!-- Contact Form Section -->
+      <section class="py-12 md:py-16 bg-card/50">
+        <div class="container mx-auto px-4">
+          <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
+              أرسل لنا رسالتك
+            </h2>
+            <p class="text-center text-muted-foreground mb-8">
+              سنرد عليك في أقرب وقت ممكن
+            </p>
+            <ContactForm client:load />
+          </div>
+        </div>
+      </section>
+      
+      <!-- Company Info & Map -->
+      <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+          <CompanyInfo client:idle />
+        </div>
+      </section>
+      
+      <!-- Social Links -->
+      <section class="py-8 md:py-12 border-t border-border/20 bg-card/30">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-6">
+            <h3 class="text-xl font-bold text-foreground mb-2">
+              تابعنا على وسائل التواصل
+            </h3>
+            <p class="text-muted-foreground">
+              ابقَ على اطلاع بآخر الأخبار والعروض
+            </p>
+          </div>
+          <SocialLinks client:idle />
+        </div>
+      </section>
+    </main>
+    
+    <CommonFooter variant="complex" />
+    <WhatsAppFloatingButton client:load />
+  </div>
+</BaseLayout>
