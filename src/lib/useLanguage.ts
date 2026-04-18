@@ -31,6 +31,8 @@ function setLocale(locale: Locale) {
   if (typeof window !== 'undefined') {
     localStorage.setItem('preferred-lang', locale)
     updateDocumentAttrs(locale)
+    // Dispatch custom event so non-Vue pages can listen
+    window.dispatchEvent(new CustomEvent('lang-change', { detail: { locale } }))
   }
 }
 
