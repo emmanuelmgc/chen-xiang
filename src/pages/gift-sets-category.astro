@@ -1,4 +1,3 @@
-
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import CommonHeader from '@/components/common/CommonHeader.vue'
@@ -11,9 +10,9 @@ import TrustBar from '@/components/gift-sets-category/TrustBar.vue'
 import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
 ---
 
-<BaseLayout title="مجموعات الهدايا - نفحة NAFHA">
-  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
-    <CommonHeader client:load />
+<BaseLayout title="Gift Sets - Nafha">
+  <div class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:only="vue" />
     
     <main class="flex-1">
       <!-- Hero Section -->
@@ -27,28 +26,16 @@ import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.v
       </section>
       
       <!-- Value Proposition -->
-      <section class="py-12 md:py-16 bg-background">
-        <div class="container mx-auto px-4">
-          <ValuePropositionCards client:idle />
-        </div>
-      </section>
+      <ValuePropositionCards client:idle />
       
       <!-- Product Grid -->
-      <section class="py-12 md:py-16 bg-background">
-        <div class="container mx-auto px-4">
-          <ProductGrid client:idle />
-        </div>
-      </section>
+      <ProductGrid client:idle />
       
       <!-- FAQ Section -->
-      <section class="py-12 md:py-16 bg-background/50">
-        <div class="container mx-auto px-4">
-          <FAQSection client:idle />
-        </div>
-      </section>
+      <FAQSection client:idle />
     </main>
     
-    <CommonFooter client:load variant="complex" />
-    <WhatsAppFloatingButton client:load />
+    <CommonFooter client:only="vue" />
+    <WhatsAppFloatingButton client:only="vue" />
   </div>
 </BaseLayout>

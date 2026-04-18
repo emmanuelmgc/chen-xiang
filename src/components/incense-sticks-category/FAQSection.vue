@@ -1,5 +1,6 @@
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import type { FAQModel } from '@/data/faqs'
 import { getFaqsByCategory } from '@/data/faqs'
 import {
@@ -12,7 +13,11 @@ import { Button } from '@/components/ui/button'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import { useLanguage } from '@/lib/useLanguage'
 
-const { locale } = useLanguage()
+const { locale, initLanguage } = useLanguage()
+
+onMounted(() => {
+  initLanguage()
+})
 
 interface Props {
   category: FAQModel['category']
@@ -63,7 +68,7 @@ const getAnswer = (faq: FAQModel) => {
         <Accordion type="single" collapsible class="w-full">
           <AccordionItem
             v-for="(faq, index) in faqs"
-            :key="faq.id"
+            :key="index"
             :value="`faq-${index}`"
             class="border-b border-border/20"
           >

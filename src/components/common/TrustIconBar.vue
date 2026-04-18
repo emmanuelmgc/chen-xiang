@@ -1,9 +1,14 @@
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import { useLanguage } from '@/lib/useLanguage'
 
 const { locale, initLanguage } = useLanguage()
+
+onMounted(() => {
+  initLanguage()
+})
 
 const trustItems = [
   { icon: 'Wind', label_ar: 'منخفض الدخان', label_en: 'Low Smoke' },

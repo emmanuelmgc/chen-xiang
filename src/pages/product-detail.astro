@@ -1,4 +1,3 @@
-
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import CommonHeader from '@/components/common/CommonHeader.vue'
@@ -23,22 +22,16 @@ const product = getProductById(DEFAULT_PRODUCT_ID)
 if (!product) {
   return Astro.redirect('./collections.html')
 }
-
-const breadcrumbs = [
-  { label: 'الرئيسية', href: './collections.html' },
-  { label: 'المتجر', href: './collections.html' },
-  { label: product.name_ar }
-]
 ---
 
-<BaseLayout title={`${product.name_ar} | نفحة NAFHA`}>
-  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
-    <CommonHeader client:load />
+<BaseLayout title={`${product.name_en} | Nafha`}>
+  <div class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:only="vue" />
     
     <main class="flex-1 container mx-auto px-4 py-8">
       <!-- Breadcrumb -->
       <div class="mb-8">
-        <BreadcrumbNav items={breadcrumbs} />
+        <BreadcrumbNav client:load />
       </div>
 
       <!-- Product Hero (Image Gallery + Quick Info) -->
@@ -70,19 +63,9 @@ const breadcrumbs = [
     <CTABar client:load product={product} />
 
     <!-- WhatsApp Floating Button -->
-    <WhatsAppFloatingButton client:load />
+    <WhatsAppFloatingButton client:only="vue" />
 
     <!-- Footer -->
-    <CommonFooter variant="simple" />
+    <CommonFooter client:only="vue" />
   </div>
 </BaseLayout>
-
-<style>
-  :global(html[dir="rtl"]) {
-    direction: rtl;
-  }
-  
-  :global(html[dir="ltr"]) {
-    direction: ltr;
-  }
-</style>

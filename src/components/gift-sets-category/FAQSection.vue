@@ -1,5 +1,6 @@
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import {
   Accordion,
   AccordionContent,
@@ -10,7 +11,12 @@ import { getFaqsByCategory } from '@/data/faqs'
 import { useLanguage } from '@/lib/useLanguage'
 import type { FAQModel } from '@/data/faqs'
 
-const { locale } = useLanguage()
+const { locale, initLanguage } = useLanguage()
+
+onMounted(() => {
+  initLanguage()
+})
+
 const faqs = getFaqsByCategory('gifting', 4)
 
 const getQuestion = (faq: FAQModel) => {

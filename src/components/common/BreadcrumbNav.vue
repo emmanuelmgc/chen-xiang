@@ -9,17 +9,34 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import SafeIcon from '@/components/common/SafeIcon.vue'
+import { useLanguage } from '@/lib/useLanguage'
+import { onMounted } from 'vue'
+
+const { locale, initLanguage } = useLanguage()
+
+onMounted(() => {
+  initLanguage()
+})
 
 interface BreadcrumbItem {
-  label: string
+  label_ar: string
+  label_en: string
   href?: string
 }
 
 interface Props {
-  items: BreadcrumbItem[]
+  items?: BreadcrumbItem[]
 }
 
-defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  items: () => [
+    { label_ar: 'الرئيسية', label_en: 'Home', href: './collections.html' }
+  ]
+})
+
+const getLabel = (item: BreadcrumbItem) => {
+  return locale.value === 'ar' ? item.label_ar : item.label_en
+}
 </script>
 
 <template>
@@ -27,10 +44,10 @@ defineProps<Props>()
     <BreadcrumbList>
       <BreadcrumbItem v-for="(item, index) in items" :key="index">
         <BreadcrumbLink v-if="item.href" :href="item.href">
-          {{ item.label }}
+          {{ getLabel(item) }}
         </BreadcrumbLink>
         <BreadcrumbPage v-else>
-          {{ item.label }}
+          {{ getLabel(item) }}
         </BreadcrumbPage>
         <BreadcrumbSeparator v-if="index < items.length - 1">
           <SafeIcon name="ChevronLeft" :size="16" class="rtl:rotate-180" />

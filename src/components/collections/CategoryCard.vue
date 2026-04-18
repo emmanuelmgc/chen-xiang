@@ -1,12 +1,16 @@
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import type { CategoryPageModel, ProductType } from '@/data/products'
 import { Button } from '@/components/ui/button'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import { useLanguage } from '@/lib/useLanguage'
 
-const { locale } = useLanguage()
+const { locale, initLanguage } = useLanguage()
+
+onMounted(() => {
+  initLanguage()
+})
 
 interface Props {
   category: CategoryPageModel

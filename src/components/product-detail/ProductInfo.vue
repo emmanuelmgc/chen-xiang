@@ -1,9 +1,14 @@
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import type { ProductFullModel } from '@/data/products'
 import { useLanguage } from '@/lib/useLanguage'
 
-const { locale } = useLanguage()
+const { locale, initLanguage } = useLanguage()
+
+onMounted(() => {
+  initLanguage()
+})
 
 interface Props {
   product: ProductFullModel

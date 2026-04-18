@@ -1,4 +1,3 @@
-
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import CommonHeader from '@/components/common/CommonHeader.vue'
@@ -10,9 +9,9 @@ import ProductGrid from '@/components/mabkhara-accessories-category/ProductGrid.
 import FAQSection from '@/components/mabkhara-accessories-category/FAQSection.vue'
 ---
 
-<BaseLayout title="المباخر والملحقات | نفحة NAFHA">
-  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
-    <CommonHeader client:load />
+<BaseLayout title="Mabkhara & Accessories - Nafha">
+  <div class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:only="vue" />
     
     <main class="flex-1">
       <!-- Hero Section -->
@@ -28,7 +27,7 @@ import FAQSection from '@/components/mabkhara-accessories-category/FAQSection.vu
       <FAQSection client:idle />
     </main>
     
-    <CommonFooter variant="complex" />
-    <WhatsAppFloatingButton client:load />
+    <CommonFooter client:only="vue" />
+    <WhatsAppFloatingButton client:only="vue" />
   </div>
 </BaseLayout>

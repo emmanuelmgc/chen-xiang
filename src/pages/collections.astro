@@ -9,8 +9,8 @@ import FeaturedProducts from '@/components/collections/FeaturedProducts.vue'
 import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
 ---
 
-<BaseLayout title="المتجر - نفحة NAFHA">
-  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
+<BaseLayout title="Collections - Nafha">
+  <div class="min-h-screen flex flex-col bg-background">
     <CommonHeader client:only="vue" />
 
     <main class="flex-1">
@@ -18,40 +18,24 @@ import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.v
 
       <section class="py-8 md:py-12 bg-card border-b border-border/20">
         <div class="container mx-auto px-4">
-          <TrustIconBar />
+          <TrustIconBar client:only="vue" />
         </div>
       </section>
 
       <section class="py-12 md:py-16">
         <div class="container mx-auto px-4">
-          <div class="mb-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-2">
-              استكشف مجموعاتنا
-            </h2>
-            <p class="text-lg text-muted-foreground">
-              اختر من بين أربع فئات رئيسية من منتجات العود والبخور الفاخرة
-            </p>
-          </div>
           <CategoryGrid client:only="vue" />
         </div>
       </section>
 
       <section class="py-12 md:py-16 bg-card/50">
         <div class="container mx-auto px-4">
-          <div class="mb-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-2">
-              المنتجات المميزة
-            </h2>
-            <p class="text-lg text-muted-foreground">
-              اكتشف أفضل اختياراتنا من العملاء والمتخصصين
-            </p>
-          </div>
           <FeaturedProducts client:only="vue" />
         </div>
       </section>
     </main>
 
-    <CommonFooter variant="complex" />
+    <CommonFooter client:only="vue" />
     <WhatsAppFloatingButton client:only="vue" />
   </div>
 </BaseLayout>

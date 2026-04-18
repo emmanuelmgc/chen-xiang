@@ -1,4 +1,3 @@
-
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import CommonHeader from '@/components/common/CommonHeader.vue'
@@ -10,9 +9,9 @@ import BrandValuesGrid from '@/components/about/BrandValuesGrid.vue'
 import CallToActionSection from '@/components/about/CallToActionSection.vue'
 ---
 
-<BaseLayout title="عن نفحة NAFHA - قصتنا وقيمنا">
-  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
-    <CommonHeader client:load />
+<BaseLayout title="About Nafha - Our Story & Values">
+  <div class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:only="vue" />
     
     <main class="flex-1">
       <!-- Hero Section -->
@@ -31,6 +30,6 @@ import CallToActionSection from '@/components/about/CallToActionSection.vue'
       <CallToActionSection client:idle />
     </main>
     
-    <CommonFooter client:load variant="complex" />
+    <CommonFooter client:only="vue" />
   </div>
 </BaseLayout>

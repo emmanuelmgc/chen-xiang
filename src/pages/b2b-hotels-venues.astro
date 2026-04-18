@@ -1,4 +1,3 @@
-
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import CommonHeader from '@/components/common/CommonHeader.vue'
@@ -12,85 +11,37 @@ import B2BCtaSection from '@/components/b2b-hotels-venues/B2BCtaSection.vue'
 import TrustIconBar from '@/components/common/TrustIconBar.vue'
 ---
 
-<BaseLayout title="NAFHA للأعمال - الفنادق والمنتجعات">
-  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
-    <CommonHeader client:load />
+<BaseLayout title="NAFHA B2B - Hotels & Resorts">
+  <div class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:only="vue" />
     
     <main class="flex-1">
       <!-- Hero Section -->
-      <B2BHero client:load />
+      <B2BHero client:only="vue" />
       
       <!-- Trust Icon Bar -->
       <section class="py-8 md:py-12 bg-card border-b border-border/20">
         <div class="container mx-auto px-4">
-          <TrustIconBar />
+          <TrustIconBar client:only="vue" />
         </div>
       </section>
       
       <!-- Value Props Section -->
-      <section class="py-12 md:py-20 bg-background">
-        <div class="container mx-auto px-4">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              لماذا تختار NAFHA للأعمال؟
-            </h2>
-            <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-              نحن نفهم احتياجات الضيافة الفاخرة ونقدم حلولاً مخصصة تعكس قيم علامتك التجارية
-            </p>
-          </div>
-          <B2BValueProps client:idle />
-        </div>
-      </section>
+      <B2BValueProps client:idle />
       
       <!-- Use Cases Section -->
-      <section class="py-12 md:py-20 bg-card">
-        <div class="container mx-auto px-4">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              حالات الاستخدام الناجحة
-            </h2>
-            <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-              اكتشف كيف استخدمت الفنادق والمنتجعات الفاخرة منتجات NAFHA لتحسين تجربة الضيوف
-            </p>
-          </div>
-          <B2BUseCases client:idle />
-        </div>
-      </section>
+      <B2BUseCases client:idle />
       
       <!-- Service Packages Section -->
-      <section class="py-12 md:py-20 bg-background">
-        <div class="container mx-auto px-4">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              باقات الخدمات المتخصصة
-            </h2>
-            <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-              اختر الباقة التي تناسب احتياجات عملك، من الحلول الأساسية إلى التخصيص الكامل
-            </p>
-          </div>
-          <B2BServicePackages client:idle />
-        </div>
-      </section>
+      <B2BServicePackages client:idle />
       
       <!-- Inquiry Form Section -->
-      <section class="py-12 md:py-20 bg-card">
-        <div class="container mx-auto px-4 max-w-3xl">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              اطلب عرض سعر مخصص
-            </h2>
-            <p class="text-lg text-muted-foreground">
-              أخبرنا عن احتياجاتك وسيتواصل معك فريقنا في غضون يوم عمل واحد
-            </p>
-          </div>
-          <B2BInquiryForm client:load />
-        </div>
-      </section>
+      <B2BInquiryForm client:load />
       
       <!-- CTA Section -->
       <B2BCtaSection client:idle />
     </main>
     
-    <CommonFooter variant="complex" />
+    <CommonFooter client:only="vue" />
   </div>
 </BaseLayout>

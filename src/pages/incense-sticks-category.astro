@@ -1,24 +1,20 @@
-
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import CommonHeader from '@/components/common/CommonHeader.vue'
 import CommonFooter from '@/components/common/CommonFooter.vue'
 import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
 import CategoryPageContent from '@/components/incense-sticks-category/CategoryPageContent.vue'
-
-const pageTitle = 'أعواد البخور منخفضة الدخان | نفحة NAFHA'
-const pageDescription = 'اكتشف مجموعتنا من أعواد البخور منخفضة الدخان المصممة للمساحات الحضرية والصغيرة. رائحة نقية وحرق موحد.'
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
-  <div dir="rtl" lang="ar-SA" class="min-h-screen flex flex-col bg-background">
-    <CommonHeader client:load />
+<BaseLayout title="Low Smoke Incense Sticks - Nafha">
+  <div class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:only="vue" />
     
     <main class="flex-1">
       <CategoryPageContent client:idle />
     </main>
     
-    <CommonFooter client:idle variant="complex" />
-    <WhatsAppFloatingButton client:idle />
+    <CommonFooter client:only="vue" />
+    <WhatsAppFloatingButton client:only="vue" />
   </div>
 </BaseLayout>
