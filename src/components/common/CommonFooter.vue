@@ -1,10 +1,11 @@
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import { useLanguage } from '@/lib/useLanguage'
+import { CONTACT_INFO } from '@/data/contact_info'
 
 const { locale, initLanguage } = useLanguage()
 
@@ -21,6 +22,21 @@ withDefaults(defineProps<Props>(), {
 })
 
 const currentYear = new Date().getFullYear()
+
+const email = ref('')
+const subscribed = ref(false)
+const subscribing = ref(false)
+
+const handleSubscribe = async () => {
+  if (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) return
+  subscribing.value = true
+  // Simulate API call — replace with actual endpoint when available
+  await new Promise(r => setTimeout(r, 800))
+  subscribing.value = false
+  subscribed.value = true
+  email.value = ''
+  setTimeout(() => { subscribed.value = false }, 4000)
+}
 
 const serviceLinks = [
   { label_ar: 'كيفية الاستخدام', label_en: 'How to Use', href: './help-center.html' },
@@ -42,11 +58,11 @@ const legalLinks = [
   { label_ar: 'معلومات الشركة', label_en: 'Company Information', href: './company-identity-card.html' },
 ]
 
-const socialLinks = [
-  { icon: 'Instagram', href: '#', label: 'Instagram' },
-  { icon: 'Twitter', href: '#', label: 'Twitter' },
-  { icon: 'Facebook', href: '#', label: 'Facebook' },
-]
+const socialLinks = CONTACT_INFO.socialMedia.map(s => ({
+  icon: s.iconName,
+  href: s.url,
+  label: s.platform,
+}))
 
 const getLinkLabel = (item: typeof serviceLinks[0]) => {
   return locale.value === 'ar' ? item.label_ar : item.label_en
@@ -101,15 +117,25 @@ const getLinkLabel = (item: typeof serviceLinks[0]) => {
             {{ locale === 'ar' ? 'اشترك للحصول على آخر الأخبار والعروض' : 'Subscribe for the latest news and offers' }}
           </p>
           <div class="flex gap-2">
-            <Input 
-              type="email" 
-              :placeholder="locale === 'ar' ? 'بريدك الإلكتروني' : 'Your email'"
-              class="flex-1"
-            />
-            <Button variant="default" size="icon">
-              <SafeIcon name="Send" :size="18" />
-            </Button>
+            <form @submit.prevent="handleSubscribe" class="flex gap-2 flex-1">
+              <Input
+                v-model="email"
+                type="email"
+                :placeholder="locale === 'ar' ? 'بريدك الإلكتروني' : 'Your email'"
+                class="flex-1"
+                required
+              />
+              <Button type="submit" variant="default" size="icon" :disabled="subscribing">
+                <SafeIcon v-if="!subscribing" name="Send" :size="18" />
+                <span v-else class="inline-block w-4 h-4 border-2 border-white/50 border-t-white rounded-full animate-spin" />
+              </Button>
+            </form>
           </div>
+          <Transition name="fade">
+            <p v-if="subscribed" class="mt-2 text-sm text-green-600">
+              {{ locale === 'ar' ? '✓ تم الاشتراك بنجاح!' : '✓ Successfully subscribed!' }}
+            </p>
+          </Transition>
         </div>
       </div>
 
@@ -160,3 +186,14 @@ const getLinkLabel = (item: typeof serviceLinks[0]) => {
     </div>
   </footer>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
