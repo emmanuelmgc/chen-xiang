@@ -13,15 +13,16 @@ import HowToUseSteps from '@/components/product-detail/HowToUseSteps.vue'
 import SafetyNotice from '@/components/product-detail/SafetyNotice.vue'
 import RelatedProducts from '@/components/product-detail/RelatedProducts.vue'
 import CTABar from '@/components/product-detail/CTABar.vue'
-import { getProductById } from '@/data/products'
+import { getProductById, PRODUCTS_LIST } from '@/data/products'
 
-// 默认产品 ID（SSG 编译时常量）
-const DEFAULT_PRODUCT_ID = 'stick_sandal_classic'
-const product = getProductById(DEFAULT_PRODUCT_ID)
-
-if (!product) {
-  return Astro.redirect('./collections.html')
+export function getStaticPaths() {
+  return PRODUCTS_LIST.map(product => ({
+    params: { id: product.id },
+  }))
 }
+
+const { id } = Astro.params
+const product = getProductById(id)
 ---
 
 <BaseLayout title={`${product.name_en} | Nafha`}>
