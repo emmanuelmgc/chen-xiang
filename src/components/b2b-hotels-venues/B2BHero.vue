@@ -3,6 +3,7 @@
 import { ref, onMounted } from 'vue'
 import { Button } from '@/components/ui/button'
 import { B2B_HERO_CONTENT } from '@/data/b2b_content'
+import { CONTACT_INFO } from '@/data/contact_info'
 import { useLanguage } from '@/lib/useLanguage'
 
 const { locale, initLanguage } = useLanguage()
@@ -36,9 +37,9 @@ function scrollToForm() {
 
 function navigateToWhatsApp() {
   const message = locale.value === 'ar' 
-    ? 'مرحباً NAFHA، أود الاستفسار عن خدمات B2B'
-    : "Hello NAFHA, I'd like to inquire about B2B services"
-  window.open(`https://wa.me/966500000000?text=${encodeURIComponent(message)}`, '_blank')
+    ? CONTACT_INFO.baseMessage_b2bQuote_ar
+    : CONTACT_INFO.baseMessage_b2bQuote_en
+  window.open(`https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank')
 }
 </script>
 

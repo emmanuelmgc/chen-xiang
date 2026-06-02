@@ -3,12 +3,16 @@
 import { Button } from '@/components/ui/button'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import { useLanguage } from '@/lib/useLanguage'
+import { CONTACT_INFO } from '@/data/contact_info'
 
 const { locale, initLanguage } = useLanguage()
 initLanguage()
 
 function navigateToWhatsApp() {
-  window.open('https://wa.me/966500000000?text=مرحباً NAFHA، أود الاستفسار عن خدمات B2B', '_blank')
+  const message = locale.value === 'ar' 
+    ? CONTACT_INFO.baseMessage_b2bQuote_ar
+    : CONTACT_INFO.baseMessage_b2bQuote_en
+  window.open(`https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank')
 }
 
 function navigateToContact() {

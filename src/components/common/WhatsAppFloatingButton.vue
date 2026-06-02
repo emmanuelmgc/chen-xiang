@@ -4,6 +4,7 @@ import { ref, onMounted, computed } from 'vue'
 import { Button } from '@/components/ui/button'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import { useLanguage } from '@/lib/useLanguage'
+import { CONTACT_INFO } from '@/data/contact_info'
 
 const { locale, initLanguage } = useLanguage()
 
@@ -12,7 +13,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  phoneNumber: '966500000000'
+  phoneNumber: CONTACT_INFO.whatsappNumber
 })
 
 const isElevated = ref(false)

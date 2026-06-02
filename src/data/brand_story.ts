@@ -27,9 +27,19 @@ export const BRAND_STORY_CONTENT = {
   longStory_ar: "في كثير من الأماكن، يعتبر العطر مجرد منتج؛ ولكن في الخليج، هو لغة – للترحيب، والتجمع، والاحتفال، والدعاء، والوداع. نحن نتفهم هذه اللغة ونحترم إيقاعها. نقطة انطلاق NAFHA جاءت من زراعة العود: فالعود ليس عطراً سريع التحضير، بل هو تراكم للوقت. لقد رأينا الشجرة تنمو ببطء في المواسم، ونعلم أن كل دفعة من المواد الخام تحمل اختلافات دقيقة بسبب المناخ والحرفة. لهذا السبب، نؤمن بقوة 'الإتقان الرصين': لا يجب أن تكون الرائحة قوية لدرجة الإزعاج، ولا يجب أن يكون الدخان ثقيلاً لدرجة التهيج. المهم هو أن يجعل المكان أكثر تهذيباً وأكثر جاذبية للبقاء.ركزنا في المرحلة الأولى على منتجين الأكثر ملاءمة للحياة اليومية الخليجية والأكثر قدرة على إظهار اختلافنا: أعواد البخور منخفضة الدخان (للوفود، والمساحات الصغيرة، والمكاتب، والفنادق) وبخور رقائق العود (للضيافة التقليدية والتجمعات العائلية). نستخدم تركيبة عطرية أكثر وضوحاً، وشكلاً يناسب المبخرة الكهربائية، وإجراءات تشغيل قياسية سهلة الاستخدام، لنجعل 'استخدام العود' أمراً بسيطاً وأنيقاً. NAFHA لا تقدم ادعاءات طبية مبالغ فيها، بل نعد بتجربة حقيقية: احتراق نظيف، طبقات عطرية واضحة، دفعات ثابتة، بطاقات تعريف واضحة، واحترام للطقوس. لأن العلامة التجارية التي تدوم حقاً لا تأتي من شعار، بل تأتي من احترام 'الشخص والمكان والتراث' في كل مرة يُفتح فيها صندوق الهدية ويُشعل فيها البخور.",
   longStory_en: "In many places, fragrance is just a product; but in the Gulf, it is a language—for welcoming, gathering, celebration, prayer, and farewell. We understand this language and respect its rhythm. The starting point of NAFHA came from Oud cultivation: Oud is not a fast fragrance, but an accumulation of time. We have seen the tree grow slowly through the seasons, and we know that every batch of raw materials carries subtle differences due to climate and craftsmanship. For this reason, we strongly believe in 'Restrained Excellence': the scent does not need to be overwhelming, and the smoke does not need to be irritatingly heavy. What matters is making the space more hospitable and inviting to linger. In the first phase, we focused on two products most suitable for daily Gulf life and best able to show our difference: Low-Smoke Incense Sticks (for visitors, small spaces, offices, and hotels) and Bakhoor Oud Chips (for traditional hospitality and family gatherings). We use clearer aromatic expressions, forms suited for electric Mabkhara, and user-friendly SOPs, making the 'use of Oud' simple yet elegant. NAFHA makes no exaggerated medical claims; we promise a genuine experience: clean burning, clear aromatic layers, consistent batches, transparent labeling, and respect for ritual. Because a truly lasting brand comes not from a slogan, but from respecting 'the person, the place, and the heritage' every time a gift box is opened and the incense is lit.",
 
+  storySectionTitle_ar: "رحلتنا من الجذور إلى الطقس",
+  storySectionTitle_en: "Our Journey from Roots to Ritual",
+
   sourcingMapImage: "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/61cb9a64-f0c4-4a97-9874-c5d83f48d4bf.png",
+  sourcingMapAlt_ar: "خريطة المصادر",
+  sourcingMapAlt_en: "Sourcing Map",
   sourcingDescription_ar: "نحن نستخدم مواد خام من مناطق رئيسية مثل: العود الكينام المحلي، وغابات هاينان وفيتنام وقوانغشي. يتم تخمير المواد لمدة تزيد عن ثلاث سنوات لضمان الجودة.",
   sourcingDescription_en: "We utilize raw materials from key regions: local Qinan Oud, and forests in Hainan, Vietnam, and Guangxi. The materials are cured for over three years to ensure premium quality.",
+
+  valuesSectionTitle_ar: "قيمنا الأساسية",
+  valuesSectionTitle_en: "Our Core Values",
+  valuesSectionSubtitle_ar: "ثلاث ركائز تحدد هويتنا وتوجه كل قراراتنا",
+  valuesSectionSubtitle_en: "Three pillars that define our identity and guide every decision",
 };
 
 export const BRAND_VALUES: BrandValueModel[] = [

@@ -1,7 +1,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { BRAND_VALUES } from '@/data/brand_story'
+import { BRAND_VALUES, BRAND_STORY_CONTENT } from '@/data/brand_story'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 
 const isClient = ref(true)
@@ -24,10 +24,16 @@ onMounted(() => {
           :class="isClient ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'"
         >
           <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            قيمنا الأساسية
+            {{ BRAND_STORY_CONTENT.valuesSectionTitle_ar }}
           </h2>
+          <p class="text-sm text-muted-foreground mb-4 italic">
+            {{ BRAND_STORY_CONTENT.valuesSectionTitle_en }}
+          </p>
           <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
-            ثلاث ركائز تحدد هويتنا وتوجه كل قراراتنا
+            {{ BRAND_STORY_CONTENT.valuesSectionSubtitle_ar }}
+          </p>
+          <p class="text-sm text-muted-foreground max-w-2xl mx-auto mb-4 italic">
+            {{ BRAND_STORY_CONTENT.valuesSectionSubtitle_en }}
           </p>
         </div>
       </div>

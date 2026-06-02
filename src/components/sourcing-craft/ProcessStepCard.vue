@@ -1,6 +1,9 @@
 
 <script setup lang="ts">
 import type { StoryProcessStepModel } from '@/data/brand_story'
+import { useLanguage } from '@/lib/useLanguage'
+
+const { locale } = useLanguage()
 
 interface Props {
   step: StoryProcessStepModel
@@ -21,7 +24,7 @@ withDefaults(defineProps<Props>(), {
     <div class="relative h-64 overflow-hidden bg-muted">
       <img
         :src="step.imageUrl"
-        :alt="step.title_ar"
+        :alt="locale === 'ar' ? step.title_ar : step.title_en"
         class="w-full h-full object-cover hover-scale"
       />
       <!-- Step Number Badge -->

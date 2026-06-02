@@ -54,8 +54,11 @@ onMounted(() => {
           :class="isClient ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'"
         >
           <h3 class="text-2xl md:text-3xl font-bold text-foreground mb-6">
-            رحلتنا من الجذور إلى الطقس
+            {{ BRAND_STORY_CONTENT.storySectionTitle_ar }}
           </h3>
+          <p class="text-muted-foreground text-base mb-6 italic">
+            {{ BRAND_STORY_CONTENT.storySectionTitle_en }}
+          </p>
           <p class="text-foreground/80 text-base md:text-lg leading-relaxed mb-6">
             {{ BRAND_STORY_CONTENT.longStory_ar }}
           </p>
@@ -71,7 +74,7 @@ onMounted(() => {
         >
           <img
             :src="BRAND_STORY_CONTENT.sourcingMapImage"
-            alt="خريطة المصادر"
+            :alt="BRAND_STORY_CONTENT.sourcingMapAlt_en"
             class="w-full h-auto rounded-lg shadow-card"
           />
           <p class="text-sm text-muted-foreground mt-4 text-center">
