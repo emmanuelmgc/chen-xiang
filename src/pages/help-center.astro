@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
+import HelpCenterPage from '@/components/help-center/HelpCenterPage.vue'
+---
+
+<BaseLayout title="Help Center - Nafha">
+  <div class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:only="vue" />
+
+    <main class="flex-1">
+      <HelpCenterPage client:only="vue" />
+    </main>
+
+    <CommonFooter client:only="vue" />
+    <WhatsAppFloatingButton client:only="vue" />
+  </div>
+</BaseLayout>
