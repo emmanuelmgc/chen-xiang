@@ -96,7 +96,7 @@ export const B2B_USE_CASES: B2BUseCaseModel[] = [
   {
     id: "wedding_gifting",
     title_ar: "توزيعات حفلات الزفاف",
-    title_en: "Wedding Gifting Favors",
+    title_en: "Wedding Favors",
     description_ar: "تصميم مجموعات إهداء مخصصة للضيوف تحمل توقيع الحدث لترك ذكرى جميلة.",
     description_en: "Designing custom gift sets for wedding guests that carry the event's signature, leaving a beautiful memory.",
     imageUrl: "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/38977709-8a6e-4e4c-805f-a403d1283187.png",
@@ -109,7 +109,7 @@ export const B2B_SERVICE_PACKAGES: B2BServicePackageModel[] = [
     name_ar: "الباقة الأساسية",
     name_en: "Essentials Package",
     deliverables_ar: ["الوصول إلى قائمة الأسعار الخاصة بالجملة", "استشارة مجانية أولية", "تسليم دفعة واحدة"],
-    deliverables_en: ["Access to wholesale pricing list", "Initial free consultation", "Single batch delivery"],
+    deliverables_en: ["Access to our wholesale price list", "Initial free consultation", "Single batch delivery"],
   },
   {
     id: "standard",

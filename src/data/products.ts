@@ -45,8 +45,8 @@ export interface ProductSpecModel {
   burnTime_en: string; // e.g., "30-40 Min (per stick)"
   smokeLevel_ar: string; // 例如: "منخفض جداً"
   smokeLevel_en: string; // e.g., "Very Low"
-  applicableSpace_ar: string; // 例如: "10-25 متر مربع"
-  applicableSpace_en: string; // e.g., "10-25 Sqm"
+  recommendedRoomSize_ar: string; // 例如: "10-25 متر مربع"
+  recommendedRoomSize_en: string; // e.g., "10-25 Sqm"
   material_ar: string; // 原材料
   material_en: string;
 }
@@ -118,8 +118,8 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       weight_ar: "٣٠ عصا / ١٥ جم", weight_en: "30 Sticks / 15g",
       burnTime_ar: "٤٠ دقيقة (للعصا)", burnTime_en: "40 Min (per stick)",
       smokeLevel_ar: "منخفض جداً", smokeLevel_en: "Very Low",
-      applicableSpace_ar: "١٥-٢٠ متر مربع", applicableSpace_en: "15-20 Sqm",
-      material_ar: "خشب صندل مع لاصق نباتي", material_en: "Sandalwood with Vegetable Binder",
+      recommendedRoomSize_ar: "١٥-٢٠ متر مربع", recommendedRoomSize_en: "15-20 Sqm",
+      material_ar: "خشب صندل مع لاصق نباتي", material_en: "Sandalwood with plant-based binder",
     },
     sourcing: {
       origin_ar: "قوائم بالي، اندونيسيا", origin_en: "Gowyem Bali, Indonesia",
@@ -161,7 +161,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       weight_ar: "٥٠ جرام", weight_en: "50 Grams",
       burnTime_ar: "٣ ساعات إجمالي (للاستخدام المتقطع)", burnTime_en: "3 Hrs Total (Intermittent Use)",
       smokeLevel_ar: "تقليدي", smokeLevel_en: "Traditional",
-      applicableSpace_ar: "٥٠+ متر مربع", applicableSpace_en: "50+ Sqm",
+      recommendedRoomSize_ar: "٥٠+ متر مربع", recommendedRoomSize_en: "50+ Sqm",
       material_ar: "رقائق عود هندي، زيوت عطرية طبيعية، راتنجات", material_en: "Indian Oud Chips, Natural Oil, Resins",
     },
     sourcing: {
@@ -204,7 +204,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       weight_ar: "٨٠٠ جرام", weight_en: "800 Grams",
       burnTime_ar: "تسخين مستمر حتى ٣ ساعات", burnTime_en: "Continuous heating up to 3 hours",
       smokeLevel_ar: "بدون دخان إضافي (يعتمد على البخور)", smokeLevel_en: "No added smoke (Bakhoor dependent)",
-      applicableSpace_ar: "أي مساحة داخلية", applicableSpace_en: "Any indoor space",
+      recommendedRoomSize_ar: "أي مساحة داخلية", recommendedRoomSize_en: "Any indoor space",
       material_ar: "قاعدة من النحاس المطلي بالذهب", material_en: "Gold-plated brass base",
     },
     sourcing: {
@@ -247,7 +247,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       weight_ar: "مجموعة منوعة", weight_en: "Assorted Collection",
       burnTime_ar: "متنوع حسب المنتج", burnTime_en: "Varies by product",
       smokeLevel_ar: "منخفض ومتوسط", smokeLevel_en: "Low and Medium",
-      applicableSpace_ar: "للأفراد والعائلة", applicableSpace_en: "Personal and Family Use",
+      recommendedRoomSize_ar: "للأفراد والعائلة", recommendedRoomSize_en: "Personal and Family Use",
       material_ar: "مزيج من العود، الراتنجات، والمعدن", material_en: "Mix of Oud, Resins, and Metal",
     },
     sourcing: {
@@ -290,7 +290,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       weight_ar: "٤٠ عصا / ٢٠ جم", weight_en: "40 Sticks / 20g",
       burnTime_ar: "٥٠-٦٠ دقيقة (للعصا)", burnTime_en: "50-60 Min (per stick)",
       smokeLevel_ar: "منخفض", smokeLevel_en: "Low",
-      applicableSpace_ar: "٢٠-٣٠ متر مربع", applicableSpace_en: "20-30 Sqm",
+      recommendedRoomSize_ar: "٢٠-٣٠ متر مربع", recommendedRoomSize_en: "20-30 Sqm",
       material_ar: "عود، مزيج التوابل، راتنج", material_en: "Oud, Spice Blend, Resin",
     },
     sourcing: {
@@ -333,7 +333,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       weight_ar: "٣٠٠ جرام", weight_en: "300 Grams",
       burnTime_ar: "لا ينطبق", burnTime_en: "N/A",
       smokeLevel_ar: "لا ينطبق", smokeLevel_en: "N/A",
-      applicableSpace_ar: "المساحات الداخلية/المكتب", applicableSpace_en: "Indoor spaces / Office",
+      recommendedRoomSize_ar: "المساحات الداخلية/المكتب", recommendedRoomSize_en: "Indoor spaces / Office",
       material_ar: "سيراميك معاد حرقه (لون الرمال)", material_en: "Refired Ceramic (Sand color)",
     },
     sourcing: {
@@ -407,11 +407,11 @@ export const PRODUCT_CATEGORIES: Record<ProductType, CategoryPageModel> = {
     title_en: "Incense Sticks (Low Smoke)",
     heroImage: "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/e7292b9a-7e08-4548-b1ea-3aa71717c914.png",
     heroSubtitle_ar: "لتجربة يومية أنظف وأكثر تناغماً، دون الروائح الحادة.",
-    heroSubtitle_en: "For a cleaner, more harmonious daily experience, without harsh odors.",
+    heroSubtitle_en: "For a cleaner, more harmonious daily experience, without harsh smoke.",
     usps: [
       { iconName: "CloudOff", title_ar: "دخان أقل 60%", title_en: "60% Less Smoke" },
       { iconName: "Timer", title_ar: "حرق موحد", title_en: "Consistent Burn Time" },
-      { iconName: "Sprout", title_ar: "مواد نباتية لاصقة", title_en: "Vegetable Binders" },
+      { iconName: "Sprout", title_ar: "لاصقات نباتية", title_en: "Plant-based Binders" },
     ],
     educationalCard: {
       title_ar: "لماذا نفضل الأعواد منخفضة الدخان؟",
@@ -477,7 +477,7 @@ export const PRODUCT_CATEGORIES: Record<ProductType, CategoryPageModel> = {
     usps: [
       { iconName: "Package", title_ar: "تغليف مخصص", title_en: "Custom Packaging" },
       { iconName: "ReceiptText", title_ar: "بطاقة تهنئة مجانية", title_en: "Free Greeting Card" },
-      { iconName: "CalendarCheck", title_ar: "للمناسبات السنوية", title_en: "Suitable for Annual Events" },
+      { iconName: "CalendarCheck", title_ar: "مثالي للمناسبات الخاصة", title_en: "Perfect for Special Occasions" },
     ],
     educationalCard: {
       title_ar: "كيفية تخصيص الهدية المثالية",

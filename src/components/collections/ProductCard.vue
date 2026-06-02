@@ -91,9 +91,6 @@ const getWhatsAppUrl = () => {
         <p class="text-sm font-bold text-primary mb-1">
           {{ getPriceRange() }}
         </p>
-        <p class="text-xs text-muted-foreground">
-          {{ locale === 'ar' ? 'ابتداءً من ... مع تمارا/تابي' : 'Starting from ... with Tamara/Tabi' }}
-        </p>
       </div>
 
       <!-- CTA Buttons -->

@@ -36,8 +36,8 @@ const content = {
   viewDetails_en: 'View Details',
   whatsappAria_ar: 'تواصل عبر واتساب',
   whatsappAria_en: 'Contact via WhatsApp',
-  priceFrom_ar: 'ابتداءً من ... مع تمارا/تابي',
-  priceFrom_en: 'Starting from... with Tamara/Tabby',
+  priceFrom_ar: '',
+  priceFrom_en: '',
 }
 </script>
 
@@ -87,9 +87,6 @@ const content = {
       <div class="mb-4">
         <p class="text-sm font-semibold text-primary">
           {{ locale === 'ar' ? product.priceRange_ar : product.priceRange_en }}
-        </p>
-        <p class="text-xs text-muted-foreground">
-          {{ locale === 'ar' ? content.priceFrom_ar : content.priceFrom_en }}
         </p>
       </div>
 

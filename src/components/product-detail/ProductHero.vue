@@ -119,9 +119,6 @@ onMounted(() => {
       <div class="space-y-2">
         <p class="text-sm text-muted-foreground">{{ locale === 'ar' ? 'السعر المرجعي' : 'Reference Price' }}</p>
         <p class="text-3xl font-bold text-foreground">{{ locale === 'ar' ? product.priceRange_ar : product.priceRange_en }}</p>
-        <p class="text-xs text-muted-foreground">
-          {{ locale === 'ar' ? 'ابتداءً من ... مع تمارا / تابي' : 'Starting from... with Tamara / Tabby' }}
-        </p>
       </div>
 
       <!-- Quick Specs -->
@@ -139,8 +136,8 @@ onMounted(() => {
           <p class="font-semibold text-sm">{{ locale === 'ar' ? product.specs.weight_ar : product.specs.weight_en }}</p>
         </div>
         <div>
-          <p class="text-xs text-muted-foreground mb-1">{{ locale === 'ar' ? 'المساحة المناسبة' : 'Applicable Space' }}</p>
-          <p class="font-semibold text-sm">{{ locale === 'ar' ? product.specs.applicableSpace_ar : product.specs.applicableSpace_en }}</p>
+          <p class="text-xs text-muted-foreground mb-1">{{ locale === 'ar' ? 'الفضاء الموصى به' : 'Recommended Room Size' }}</p>
+          <p class="font-semibold text-sm">{{ locale === 'ar' ? product.specs.recommendedRoomSize_ar : product.specs.recommendedRoomSize_en }}</p>
         </div>
       </div>
 

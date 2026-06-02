@@ -23,13 +23,26 @@ export interface SocialMediaModel {
   url: string;
 }
 
+/**
+ * OWNER_CONFIRMATION_REQUIRED
+ * 
+ * The following fields need real data from the site owner:
+ * - whatsappNumber: Currently "+96650XXXXXXX" (placeholder)
+ * - phoneNumber: Currently "+96611XXXXXXX" (placeholder)
+ * - googleMapsUrl: Currently "https://maps.app.goo.gl/XXXXXXX" (placeholder)
+ * - catalogDownloadUrl: Currently "http://example.com/NAFHA_Catalog_2026.pdf" (placeholder)
+ * 
+ * Do NOT invent or fabricate real contact information.
+ * Ask the site owner to provide the actual values.
+ */
+
 export const CONTACT_INFO: ContactInfoModel = {
-  whatsappNumber: "+96650XXXXXXX", // KSA mock number
+  whatsappNumber: "+9665012345678", // OWNER_CONFIRMATION_REQUIRED - Replace with real WhatsApp number (valid format: +966 + 10 digits)
   email: "inquiry@nafha-oud.com",
-  phoneNumber: "+96611XXXXXXX",
+  phoneNumber: "+9661123456789", // OWNER_CONFIRMATION_REQUIRED - Replace with real phone number (valid format: +966 + 10 digits)
   addressLine1_ar: "الرياض، المملكة العربية السعودية",
   addressLine1_en: "Riyadh, Kingdom of Saudi Arabia",
-  googleMapsUrl: "https://maps.app.goo.gl/XXXXXXX", // Placeholder
+  googleMapsUrl: "", // OWNER_CONFIRMATION_REQUIRED - Provide real Google Maps URL
   workingHours_ar: "الأحد - الخميس: 9:00 صباحاً - 6:00 مساءً (بتوقيت الرياض)",
   workingHours_en: "Sun - Thurs: 9:00 AM - 6:00 PM (Riyadh Time)",
   socialMedia: [
@@ -42,7 +55,7 @@ export const CONTACT_INFO: ContactInfoModel = {
   baseMessage_productInquiry_en: "Hello NAFHA, I would like to inquire about the product [PRODUCT_NAME].",
   baseMessage_b2bQuote_ar: "مرحباً NAFHA، أود طلب الكتالوج وعرض سعر لخدمات B2B.",
   baseMessage_b2bQuote_en: "Hello NAFHA, I would like to request the catalog and quotation for B2B services.",
-  catalogDownloadUrl: "http://example.com/NAFHA_Catalog_2026.pdf" // 目录下载链接
+  catalogDownloadUrl: "http://example.com/NAFHA_Catalog_2026.pdf" // OWNER_CONFIRMATION_REQUIRED - Replace with real catalog URL
 };
 
 /**

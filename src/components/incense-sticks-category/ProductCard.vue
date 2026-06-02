@@ -28,8 +28,8 @@ const content = {
   viewDetails_en: 'View Details',
   whatsappInquiry_ar: 'استفسر عبر واتساب',
   whatsappInquiry_en: 'Inquire via WhatsApp',
-  priceNote_ar: 'ابتداءً من ... مع تمارا/تابي',
-  priceNote_en: 'Starting from... with Tamara/Tabby',
+  priceNote_ar: '',
+  priceNote_en: '',
 }
 </script>
 
@@ -74,9 +74,6 @@ const content = {
       <div class="flex flex-col gap-1">
         <p class="text-sm font-medium text-foreground">
           {{ locale === 'ar' ? product.priceRange_ar : product.priceRange_en }}
-        </p>
-        <p class="text-xs text-muted-foreground">
-          {{ locale === 'ar' ? content.priceNote_ar : content.priceNote_en }}
         </p>
       </div>
       

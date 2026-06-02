@@ -1,7 +1,10 @@
 
 /**
  * Gift Sets Data File
- * Contains placeholder data for 6 gift sets
+ * 
+ * OWNER_CONFIRMATION_REQUIRED:
+ * - image fields need real image URLs/paths from the site owner
+ * - Currently using placeholder images that need to be replaced
  */
 
 import { getWhatsAppInquiryUrl } from './contact_info';
@@ -28,7 +31,7 @@ export const GIFT_SETS: GiftSetModel[] = [
     description_en: "A premium collection containing low-smoke incense sticks, selected oud chips, and a portable mini mabkhara. Perfect for an unforgettable gift.",
     priceRange_ar: "٤٩٩ - ٧٩٩ ريال",
     priceRange_en: "499 - 799 SAR",
-    image: "/images/gifts/placeholder-1.jpg",
+    image: "/images/gift-default.jpg",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("طقم هدايا العيد الفاخر", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Deluxe Eid Gift Set", 'en'),
   },
@@ -40,7 +43,7 @@ export const GIFT_SETS: GiftSetModel[] = [
     description_en: "A classic collection of premium oud, including low-smoke sandalwood sticks and a traditional mabkhara. An elegant gift for all occasions.",
     priceRange_ar: "٣٤٩ - ٥٤٩ ريال",
     priceRange_en: "349 - 549 SAR",
-    image: "/images/gifts/placeholder-2.jpg",
+    image: "/images/gift-default.jpg",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("مجموعة العود الكلاسيكية", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Classic Oud Collection", 'en'),
   },
@@ -52,7 +55,7 @@ export const GIFT_SETS: GiftSetModel[] = [
     description_en: "A premium set designed specifically for corporate and formal occasions. Contains distinguished oud with elegant packaging reflecting professionalism and refined taste.",
     priceRange_ar: "٧٩٩ - ١٢٩٩ ريال",
     priceRange_en: "799 - 1299 SAR",
-    image: "/images/gifts/placeholder-3.jpg",
+    image: "/images/gift-default.jpg",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("طقم هدايا الأعمال", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Corporate Gift Set", 'en'),
   },
@@ -64,7 +67,7 @@ export const GIFT_SETS: GiftSetModel[] = [
     description_en: "A special set for celebrating the blessed month of Ramadan. Contains special Ramadan bakhoor and a modern electric mabkhara, perfect for the holy month atmosphere.",
     priceRange_ar: "٥٩٩ - ٨٩٩ ريال",
     priceRange_en: "599 - 899 SAR",
-    image: "/images/gifts/placeholder-4.jpg",
+    image: "/images/gift-default.jpg",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("مجموعة رمضان المبارك", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Blessed Ramadan Collection", 'en'),
   },
@@ -76,7 +79,7 @@ export const GIFT_SETS: GiftSetModel[] = [
     description_en: "A luxury collection for weddings and joyous occasions. Includes pure high-concentration oud with luxurious packaging, a gift to be remembered.",
     priceRange_ar: "٩٩٩ - ١٤٩٩ ريال",
     priceRange_en: "999 - 1499 SAR",
-    image: "/images/gifts/placeholder-5.jpg",
+    image: "/images/gift-default.jpg",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("طقم هدايا العرس", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Wedding Gift Set", 'en'),
   },
@@ -88,7 +91,7 @@ export const GIFT_SETS: GiftSetModel[] = [
     description_en: "A comprehensive set for home hospitality, containing a diverse selection of bakhoor and mabkharas. Adds warmth and welcome to every home.",
     priceRange_ar: "٣٩٩ - ٦٩٩ ريال",
     priceRange_en: "399 - 699 SAR",
-    image: "/images/gifts/placeholder-6.jpg",
+    image: "/images/gift-default.jpg",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("مجموعة الضيافة المنزلية", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Home Hospitality Collection", 'en'),
   },

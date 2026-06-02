@@ -34,8 +34,8 @@ const content = {
   viewDetails_en: 'View Details',
   whatsapp_ar: 'واتساب',
   whatsapp_en: 'WhatsApp',
-  priceNote_ar: 'ابتداءً من السعر المعروض',
-  priceNote_en: 'Starting from displayed price',
+  priceNote_ar: '',
+  priceNote_en: '',
 }
 </script>
 
