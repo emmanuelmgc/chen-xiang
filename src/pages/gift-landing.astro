@@ -1,0 +1,198 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import { GIFT_SETS } from '@/data/gift_sets'
+import { getWhatsAppInquiryUrl } from '@/data/contact_info'
+
+// Locale will be set by client-side script before paint
+const title_ar = "مجموعات الهدايا - نفحة | Gift Sets - Nafha"
+const title_en = "Gift Sets - Nafha | مجموعات الهدايا - نفحة"
+const locale = 'ar' // server default, overridden client-side before paint
+---
+
+<BaseLayout title="Gift Sets - Nafha | مجموعات الهدايا - نفحة">
+  <div class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:only="vue" />
+    
+    <main class="flex-1" id="main-content" style="display:none;">
+      <!-- Hero Section -->
+      <section class="relative py-16 md:py-24 bg-gradient-to-br from-primary/10 via-background to-accent/10">
+        <div class="container mx-auto px-4 text-center">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4" id="hero-title">
+            {locale === 'ar' ? 'مجموعات الهدايا الفاخرة' : 'Premium Gift Sets'}
+          </h1>
+          <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto" id="hero-subtitle">
+            {locale === 'ar' ? 'اكتشف أجمل مجموعات الهدايا من نفحة، هدايا تعبر عن ذوقك الرفيع' : 'Discover the finest gift sets from Nafha, gifts that express your refined taste'}
+          </p>
+        </div>
+      </section>
+      
+      <!-- Gift Sets Grid -->
+      <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-2" id="section-title">
+              {locale === 'ar' ? 'تشكيلة الهدايا' : 'Gift Collection'}
+            </h2>
+            <p class="text-lg text-muted-foreground" id="section-subtitle">
+              {locale === 'ar' ? 'اختر الهدية المثالية لكل مناسبة' : 'Choose the perfect gift for every occasion'}
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gift-sets-grid">
+            {GIFT_SETS.map((giftSet) => (
+              <div class="group rounded-lg border border-border/30 bg-card overflow-hidden transition-all duration-300 hover:shadow-card hover:border-primary/30">
+                <!-- Image Container -->
+                <div class="relative h-64 md:h-72 overflow-hidden bg-muted">
+                  <img
+                    src={giftSet.image}
+                    alt={locale === 'ar' ? giftSet.name_ar : giftSet.name_en}
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    onerror="this.src='/images/placeholder.jpg'; this.onerror=null;"
+                  />
+                </div>
+                
+                <!-- Content -->
+                <div class="p-6 space-y-4">
+                  <!-- Gift Set Name -->
+                  <div class="space-y-1">
+                    <h3 class="text-lg font-bold text-foreground line-clamp-2" id={`name-${giftSet.id}`}>
+                      {locale === 'ar' ? giftSet.name_ar : giftSet.name_en}
+                    </h3>
+                  </div>
+                
+                  <!-- Description -->
+                  <p class="text-sm text-muted-foreground line-clamp-3" id={`desc-${giftSet.id}`}>
+                    {locale === 'ar' ? giftSet.description_ar : giftSet.description_en}
+                  </p>
+                
+                  <!-- Price -->
+                  <div class="space-y-1">
+                    <p class="text-lg font-bold text-primary" id={`price-${giftSet.id}`}>
+                      {locale === 'ar' ? giftSet.priceRange_ar : giftSet.priceRange_en}
+                    </p>
+                  </div>
+                
+                  <!-- CTA Buttons -->
+                  <div class="flex gap-2 pt-2">
+                    <a
+                      href={locale === 'ar' ? giftSet.whatsappInquiryUrl_ar : giftSet.whatsappInquiryUrl_en}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm font-medium"
+                      id={`whatsapp-${giftSet.id}`}
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                      </svg>
+                      {locale === 'ar' ? 'واتساب' : 'WhatsApp'}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      <!-- Call to Action Section -->
+      <section class="py-12 md:py-16 bg-primary/5">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4" id="cta-title">
+            {locale === 'ar' ? 'هل تحتاج مساعدة في اختيار الهدية؟' : 'Need Help Choosing a Gift?'}
+          </h2>
+          <p class="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto" id="cta-subtitle">
+            {locale === 'ar' ? 'فريقنا جاهز لمساعدتك في اختيار الهدية المثالية لمناسبتك' : 'Our team is ready to help you choose the perfect gift for your occasion'}
+          </p>
+          <a
+            href={getWhatsAppInquiryUrl("Gift Sets Consultation", locale)}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium"
+            id="cta-button"
+          >
+            {locale === 'ar' ? 'تواصل معنا عبر واتساب' : 'Contact Us on WhatsApp'}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+    
+    <CommonFooter client:only="vue" />
+  </div>
+  
+  <!-- Inject GIFT_SETS data for client-side script -->
+  <script define:vars={{ giftSetsData: GIFT_SETS }}>
+    window.__GIFT_SETS__ = giftSetsData;
+  </script>
+</BaseLayout>
+
+<script is:inline>
+  // Language switching logic
+  function updateContent(lang) {
+    const isArabic = lang === 'ar';
+    
+    // Hero Section
+    document.getElementById('hero-title').textContent = isArabic 
+      ? 'مجموعات الهدايا الفاخرة' 
+      : 'Premium Gift Sets';
+    document.getElementById('hero-subtitle').textContent = isArabic 
+      ? 'اكتشف أجمل مجموعات الهدايا من نفحة، هدايا تعبر عن ذوقك الرفيع' 
+      : 'Discover the finest gift sets from Nafha, gifts that express your refined taste';
+    
+    // Section Title
+    document.getElementById('section-title').textContent = isArabic 
+      ? 'تشكيلة الهدايا' 
+      : 'Gift Collection';
+    document.getElementById('section-subtitle').textContent = isArabic 
+      ? 'اختر الهدية المثالية لكل مناسبة' 
+      : 'Choose the perfect gift for every occasion';
+    
+    // CTA Section
+    document.getElementById('cta-title').textContent = isArabic 
+      ? 'هل تحتاج مساعدة في اختيار الهدية؟' 
+      : 'Need Help Choosing a Gift?';
+    document.getElementById('cta-subtitle').textContent = isArabic 
+      ? 'فريقنا جاهز لمساعدتك في اختيار الهدية المثالية لمناسبتك' 
+      : 'Our team is ready to help you choose the perfect gift for your occasion';
+    document.getElementById('cta-button').innerHTML = (isArabic 
+      ? 'تواصل معنا عبر واتساب' 
+      : 'Contact Us on WhatsApp') + ' <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>';
+    
+    // Gift Sets Data - use window.__GIFT_SETS__ instead of hardcoded array
+    const giftSets = window.__GIFT_SETS__ || [];
+    
+    // Update each gift set card
+    giftSets.forEach(giftSet => {
+      const nameEl = document.getElementById(`name-${giftSet.id}`);
+      const descEl = document.getElementById(`desc-${giftSet.id}`);
+      const priceEl = document.getElementById(`price-${giftSet.id}`);
+      const whatsappEl = document.getElementById(`whatsapp-${giftSet.id}`);
+      
+      if (nameEl) nameEl.textContent = isArabic ? giftSet.name_ar : giftSet.name_en;
+      if (descEl) descEl.textContent = isArabic ? giftSet.description_ar : giftSet.description_en;
+      if (priceEl) priceEl.textContent = isArabic ? giftSet.priceRange_ar : giftSet.priceRange_en;
+      if (whatsappEl) {
+        whatsappEl.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> ' + (isArabic ? 'واتساب' : 'WhatsApp');
+      }
+    });
+  }
+  
+  // Listen for language changes
+  window.addEventListener('lang-change', (e) => {
+    updateContent(e.detail.locale);
+  });
+  
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const lang = localStorage.getItem('preferred-lang') || 'ar';
+    updateContent(lang);
+    // Show content only after correct language is applied (avoid flash of wrong language)
+    const mainEl = document.getElementById('main-content');
+    if (mainEl) mainEl.style.display = 'block';
+  });
+</script>

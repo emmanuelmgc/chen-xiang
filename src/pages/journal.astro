@@ -1,0 +1,44 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import JournalBlogList from '@/components/journal/JournalBlogList.vue'
+
+// Default to Arabic for initial render (will be updated by client-side script)
+const title_ar = "مجلة نفحة | Journal - Nafha"
+const title_en = "Journal - Nafha | مجلة نفحة"
+const locale = 'ar'
+---
+
+<BaseLayout title={locale === 'ar' ? title_ar : title_en}>
+  <div class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:only="vue" />
+    
+    <main class="flex-1">
+      <JournalBlogList client:load />
+    </main>
+    
+    <CommonFooter client:only="vue" />
+  </div>
+  
+  <script is:inline>
+    // Dynamic title update based on language
+    function updatePageTitle(lang) {
+      const isArabic = lang === 'ar';
+      document.title = isArabic 
+        ? 'مجلة نفحة | Journal - Nafha'
+        : 'Journal - Nafha | مجلة نفحة';
+    }
+    
+    // Listen for language changes
+    window.addEventListener('lang-change', (e) => {
+      updatePageTitle(e.detail.locale);
+    });
+    
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const lang = localStorage.getItem('preferred-lang') || 'ar';
+      updatePageTitle(lang);
+    });
+  </script>
+</BaseLayout>
