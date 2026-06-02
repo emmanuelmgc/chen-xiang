@@ -1,0 +1,35 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
+import BreadcrumbNav from '@/components/common/BreadcrumbNav.vue'
+import PolicyContent from '@/components/legal/PolicyContent.vue'
+
+const breadcrumbItems = [
+  { label_ar: 'الرئيسية', label_en: 'Home', href: './collections.html' },
+  { label_ar: 'شروط الخدمة', label_en: 'Terms of Service' }
+]
+---
+
+<BaseLayout
+  title="Terms of Service | Nafha"
+  description="Nafha terms of service. Understand the scope of our platform and governing laws."
+  canonicalUrl="https://nafha.life/terms-of-service.html"
+>
+  <div class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:only="vue" />
+
+    <main class="flex-1">
+      <div class="container mx-auto px-4 py-8">
+        <BreadcrumbNav client:only="vue" items={breadcrumbItems} />
+        <div class="mt-8">
+          <PolicyContent client:only="vue" policyKey="terms" />
+        </div>
+      </div>
+    </main>
+
+    <CommonFooter client:only="vue" />
+    <WhatsAppFloatingButton client:only="vue" />
+  </div>
+</BaseLayout>
