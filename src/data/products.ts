@@ -115,10 +115,10 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/d0e416bd-4f12-4212-b05b-865322ed0ced.png",
     ],
     specs: {
-      weight_ar: "30 عصا / 15 جم", weight_en: "30 Sticks / 15g",
-      burnTime_ar: "40 دقيقة (للعصا)", burnTime_en: "40 Min (per stick)",
+      weight_ar: "٣٠ عصا / ١٥ جم", weight_en: "30 Sticks / 15g",
+      burnTime_ar: "٤٠ دقيقة (للعصا)", burnTime_en: "40 Min (per stick)",
       smokeLevel_ar: "منخفض جداً", smokeLevel_en: "Very Low",
-      applicableSpace_ar: "15-20 متر مربع", applicableSpace_en: "15-20 Sqm",
+      applicableSpace_ar: "١٥-٢٠ متر مربع", applicableSpace_en: "15-20 Sqm",
       material_ar: "خشب صندل مع لاصق نباتي", material_en: "Sandalwood with Vegetable Binder",
     },
     sourcing: {
@@ -158,10 +158,10 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/a0435707-2295-4994-bc57-c0c918473b7e.png",
     ],
     specs: {
-      weight_ar: "50 جرام", weight_en: "50 Grams",
-      burnTime_ar: "3 ساعات إجمالي (للاستخدام المتقطع)", burnTime_en: "3 Hrs Total (Intermittent Use)",
+      weight_ar: "٥٠ جرام", weight_en: "50 Grams",
+      burnTime_ar: "٣ ساعات إجمالي (للاستخدام المتقطع)", burnTime_en: "3 Hrs Total (Intermittent Use)",
       smokeLevel_ar: "تقليدي", smokeLevel_en: "Traditional",
-      applicableSpace_ar: "50+ متر مربع", applicableSpace_en: "50+ Sqm",
+      applicableSpace_ar: "٥٠+ متر مربع", applicableSpace_en: "50+ Sqm",
       material_ar: "رقائق عود هندي، زيوت عطرية طبيعية، راتنجات", material_en: "Indian Oud Chips, Natural Oil, Resins",
     },
     sourcing: {
@@ -201,8 +201,8 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/c610c2f8-1641-4c53-bbdc-9b1bc7823e7b.png",
     ],
     specs: {
-      weight_ar: "800 جرام", weight_en: "800 Grams",
-      burnTime_ar: "تسخين مستمر حتى 3 ساعات", burnTime_en: "Continuous heating up to 3 hours",
+      weight_ar: "٨٠٠ جرام", weight_en: "800 Grams",
+      burnTime_ar: "تسخين مستمر حتى ٣ ساعات", burnTime_en: "Continuous heating up to 3 hours",
       smokeLevel_ar: "بدون دخان إضافي (يعتمد على البخور)", smokeLevel_en: "No added smoke (Bakhoor dependent)",
       applicableSpace_ar: "أي مساحة داخلية", applicableSpace_en: "Any indoor space",
       material_ar: "قاعدة من النحاس المطلي بالذهب", material_en: "Gold-plated brass base",
@@ -287,10 +287,10 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/b0645c2d-c8cb-4e74-8e27-538586b5da40.png",
     ],
     specs: {
-      weight_ar: "40 عصا / 20 جم", weight_en: "40 Sticks / 20g",
-      burnTime_ar: "50-60 دقيقة (للعصا)", burnTime_en: "50-60 Min (per stick)",
+      weight_ar: "٤٠ عصا / ٢٠ جم", weight_en: "40 Sticks / 20g",
+      burnTime_ar: "٥٠-٦٠ دقيقة (للعصا)", burnTime_en: "50-60 Min (per stick)",
       smokeLevel_ar: "منخفض", smokeLevel_en: "Low",
-      applicableSpace_ar: "20-30 متر مربع", applicableSpace_en: "20-30 Sqm",
+      applicableSpace_ar: "٢٠-٣٠ متر مربع", applicableSpace_en: "20-30 Sqm",
       material_ar: "عود، مزيج التوابل، راتنج", material_en: "Oud, Spice Blend, Resin",
     },
     sourcing: {
@@ -317,7 +317,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
     category: 'mabkhara_accessory',
     imageUrl: "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/2b01b861-a9bb-47ea-95bc-77cb601cbffa.png",
     badges: ['best_seller'],
-    priceRange_ar: "79 - 149 SAR",
+    priceRange_ar: "٧٩ - ١٤٩ ريال",
     priceRange_en: "79 - 149 SAR",
     detailUrl: "./product-detail/mabkhara_ceramic_tray.html",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("صينية سيراميك لجمع الرماد", 'ar'),
@@ -330,7 +330,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/ce2a0768-91d3-4962-95c2-e645bee23021.png",
     ],
     specs: {
-      weight_ar: "300 جرام", weight_en: "300 Grams",
+      weight_ar: "٣٠٠ جرام", weight_en: "300 Grams",
       burnTime_ar: "لا ينطبق", burnTime_en: "N/A",
       smokeLevel_ar: "لا ينطبق", smokeLevel_en: "N/A",
       applicableSpace_ar: "المساحات الداخلية/المكتب", applicableSpace_en: "Indoor spaces / Office",
