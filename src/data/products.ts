@@ -94,7 +94,7 @@ export const PRODUCT_BADGES: Record<BadgeModel['id'], BadgeModel> = {
 };
 
 // 5 Main Product Mockups
-const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
+export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
   {
     id: "stick_sandal_classic",
     name_ar: "أعواد صندل كلاسيكية مدخنة منخفضة",

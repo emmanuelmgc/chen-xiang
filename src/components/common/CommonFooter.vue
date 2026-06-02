@@ -20,6 +20,8 @@ withDefaults(defineProps<Props>(), {
   variant: 'simple'
 })
 
+const currentYear = new Date().getFullYear()
+
 const serviceLinks = [
   { label_ar: 'كيفية الاستخدام', label_en: 'How to Use', href: './help-center.html' },
   { label_ar: 'السلامة والتخزين', label_en: 'Safety & Storage', href: './help-center.html' },
@@ -129,7 +131,7 @@ const getLinkLabel = (item: typeof serviceLinks[0]) => {
           </Button>
         </div>
         <p class="text-sm text-muted-foreground">
-          {{ locale === 'ar' ? '©2026 نفحة NAFHA. جميع الحقوق محفوظة.' : '©2026 Nafha NAFHA. All rights reserved.' }}
+          {{ locale === 'ar' ? `©${currentYear} نفحة NAFHA. جميع الحقوق محفوظة.` : `©${currentYear} Nafha NAFHA. All rights reserved.` }}
         </p>
       </div>
     </div>
@@ -152,7 +154,7 @@ const getLinkLabel = (item: typeof serviceLinks[0]) => {
           </a>
         </div>
         <p class="text-sm text-muted-foreground">
-          {{ locale === 'ar' ? '© 2024 نفحة NAFHA' : '© 2024 Nafha NAFHA' }}
+          {{ locale === 'ar' ? `© ${currentYear} نفحة NAFHA` : `© ${currentYear} Nafha NAFHA` }}
         </p>
       </div>
     </div>

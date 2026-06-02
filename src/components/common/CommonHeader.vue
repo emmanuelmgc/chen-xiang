@@ -5,12 +5,14 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import LanguageSwitcher from '@/components/common/LanguageSwitcher.vue'
+import SearchDialog from '@/components/common/SearchDialog.vue'
 import { useLanguage } from '@/lib/useLanguage'
 
 const { locale, initLanguage } = useLanguage()
 
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
+const isSearchOpen = ref(false)
 
 const navItems = [
   { label_ar: 'المتجر', label_en: 'Collections', href: './collections.html' },
@@ -94,7 +96,7 @@ const getNavLabel = (item: typeof navItems[0]) => {
         <!-- Right Actions -->
         <div class="flex items-center gap-2">
           <LanguageSwitcher />
-          <Button variant="ghost" size="icon" :aria-label="locale === 'ar' ? 'البحث' : 'Search'">
+          <Button variant="ghost" size="icon" :aria-label="locale === 'ar' ? 'البحث' : 'Search'" @click="isSearchOpen = true">
             <SafeIcon name="Search" :size="20" />
           </Button>
           <Button 
@@ -111,5 +113,6 @@ const getNavLabel = (item: typeof navItems[0]) => {
         </div>
       </div>
     </div>
+    <SearchDialog v-model:open="isSearchOpen" />
   </header>
 </template>
