@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import { useLanguage } from '@/lib/useLanguage'
 import { HELP_ARTICLES, HELP_CATEGORIES, type HelpArticleSummaryModel } from '@/data/help_center'
+import { CONTACT_INFO } from '@/data/contact_info'
 
 const props = defineProps<{
   articleId: string
@@ -28,6 +29,8 @@ const categoryTitle = computed(() => {
 })
 
 const notFound = computed(() => !article.value)
+
+const whatsappUrl = computed(() => `https://wa.me/${CONTACT_INFO.whatsappNumber}`)
 </script>
 
 <template>
@@ -102,7 +105,7 @@ const notFound = computed(() => !article.value)
               variant="default"
               class="w-full sm:w-auto"
               as="a"
-              href="https://wa.me/966500000000"
+              :href="whatsappUrl"
               target="_blank"
               rel="noopener noreferrer"
             >

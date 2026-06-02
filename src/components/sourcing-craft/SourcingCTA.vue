@@ -3,9 +3,18 @@
 import { Button } from '@/components/ui/button'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import { useLanguage } from '@/lib/useLanguage'
+import { CONTACT_INFO } from '@/data/contact_info'
+import { computed } from 'vue'
 
 const { locale, initLanguage } = useLanguage()
 initLanguage()
+
+const whatsappUrl = computed(() => {
+  const message = locale.value === 'ar'
+    ? 'مرحباً، أود الاستفسار عن منتجاتكم والمصدر والحرفة'
+    : 'Hello, I would like to inquire about your products and sourcing'
+  return `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent(message)}`
+})
 </script>
 
 <template>
@@ -35,7 +44,7 @@ initLanguage()
           size="lg"
           variant="outline"
           as="a"
-          :href="locale === 'ar' ? 'https://wa.me/966500000000?text=مرحباً، أود الاستفسار عن منتجاتكم والمصدر والحرفة' : 'https://wa.me/966500000000?text=Hello, I would like to inquire about your products and sourcing'"
+          :href="whatsappUrl"
           target="_blank"
           rel="noopener noreferrer"
         >

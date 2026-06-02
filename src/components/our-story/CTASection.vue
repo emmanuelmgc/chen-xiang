@@ -1,9 +1,10 @@
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { Button } from '@/components/ui/button'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import { useLanguage } from '@/lib/useLanguage'
+import { CONTACT_INFO } from '@/data/contact_info'
 
 const { locale, initLanguage } = useLanguage()
 const isClient = ref(true)
@@ -14,6 +15,13 @@ onMounted(() => {
   requestAnimationFrame(() => {
     isClient.value = true
   })
+})
+
+const whatsappUrl = computed(() => {
+  const message = locale.value === 'ar'
+    ? 'مرحباً، أود الاستفسار عن منتجات نفحة'
+    : 'Hello, I would like to inquire about NAFHA products'
+  return `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent(message)}`
 })
 </script>
 
@@ -71,7 +79,7 @@ onMounted(() => {
             size="lg"
             variant="default"
             as="a"
-            :href="locale === 'ar' ? 'https://wa.me/966500000000?text=مرحباً، أود الاستفسار عن منتجات نفحة' : 'https://wa.me/966500000000?text=Hello, I would like to inquire about NAFHA products'"
+            :href="whatsappUrl"
             target="_blank"
             rel="noopener noreferrer"
           >

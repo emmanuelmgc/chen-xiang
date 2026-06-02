@@ -1,18 +1,21 @@
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import LanguageSwitcher from '@/components/common/LanguageSwitcher.vue'
 import SearchDialog from '@/components/common/SearchDialog.vue'
 import { useLanguage } from '@/lib/useLanguage'
+import { CONTACT_INFO } from '@/data/contact_info'
 
 const { locale, initLanguage } = useLanguage()
 
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
 const isSearchOpen = ref(false)
+
+const whatsappUrl = computed(() => `https://wa.me/${CONTACT_INFO.whatsappNumber}`)
 
 const navItems = [
   { label_ar: 'المتجر', label_en: 'Collections', href: './collections.html' },
@@ -104,7 +107,7 @@ const getNavLabel = (item: typeof navItems[0]) => {
             size="icon" 
             :aria-label="locale === 'ar' ? 'واتساب' : 'WhatsApp'"
             as="a"
-            href="https://wa.me/966500000000"
+            :href="whatsappUrl"
             target="_blank"
             rel="noopener noreferrer"
           >
