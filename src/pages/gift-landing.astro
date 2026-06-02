@@ -11,7 +11,7 @@ const title_en = "Gift Sets - Nafha | مجموعات الهدايا - نفحة"
 const locale = 'ar' // server default, overridden client-side before paint
 ---
 
-<BaseLayout title="Gift Sets - Nafha | مجموعات الهدايا - نفحة">
+<BaseLayout title={locale === 'ar' ? title_ar : title_en}>
   <div class="min-h-screen flex flex-col bg-background">
     <CommonHeader client:only="vue" />
     
