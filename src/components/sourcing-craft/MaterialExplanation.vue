@@ -1,6 +1,6 @@
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed } from 'vue'
 import {
   Accordion,
   AccordionContent,
@@ -13,7 +13,7 @@ import { useLanguage } from '@/lib/useLanguage'
 const { locale, initLanguage } = useLanguage()
 initLanguage()
 
-const materials = [
+const materials = computed(() => [
   {
     id: 'resin-content',
     title: locale.value === 'ar' ? 'محتوى الراتنج والكثافة' : 'Resin Content & Density',
@@ -38,7 +38,7 @@ const materials = [
     titleEn: 'Quality Control & Testing',
     content: locale.value === 'ar' ? 'كل دفعة من منتجاتنا تخضع لاختبارات صارمة تشمل: اختبار الاحتراق (للتحقق من نقاء الدخان)، اختبار الرائحة (للتأكد من اتساق الخصائص العطرية)، واختبار السلامة (للتحقق من خلو المنتج من المواد الكيميائية الضارة). نحتفظ بسجلات مفصلة لكل دفعة لضمان الشفافية والمساءلة.' : 'Every batch undergoes rigorous testing including: burn tests (smoke purity), aroma tests (aromatic consistency), and safety tests (harmful chemical absence). We maintain detailed batch records for full transparency and accountability.',
   },
-]
+])
 </script>
 
 <template>
