@@ -191,8 +191,7 @@ const locale = 'ar' // server default, overridden client-side before paint
   document.addEventListener('DOMContentLoaded', () => {
     const lang = localStorage.getItem('preferred-lang') || 'ar';
     updateContent(lang);
-    // Show content only after correct language is applied (avoid flash of wrong language)
-    const mainEl = document.getElementById('main-content');
-    if (mainEl) mainEl.style.display = 'block';
+    // Show content after language is determined
+    document.getElementById('main-content').style.display = 'block';
   });
 </script>

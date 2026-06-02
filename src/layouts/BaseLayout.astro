@@ -5,6 +5,7 @@ interface Props {
   ogImage?: string;
   ogType?: string;
   canonicalUrl?: string;
+  schema?: object;
 }
 
 const {
@@ -12,7 +13,8 @@ const {
   description = 'NAFHA transforms Oud into a lighter, cleaner, modern ritual of hospitality. Premium low-smoke incense sticks, bakhoor oud chips, mabkhara accessories, and luxury gift sets for the Gulf.',
   ogImage = 'https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/2e7297be-4a3c-4f3a-bd52-c7a15da1a42e.png',
   ogType = 'website',
-  canonicalUrl
+  canonicalUrl,
+  schema
 } = Astro.props;
 
 const siteUrl = 'https://nafha.life';
@@ -46,6 +48,28 @@ const currentUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    <!-- JSON-LD: Organization Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Nafha | نفحة",
+      "url": "https://nafha.life",
+      "logo": "https://nafha.life/favicon.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+966-XXX-XXXXXX",
+        "contactType": "customer service",
+        "availableLanguage": ["Arabic", "English"]
+      },
+      "sameAs": [
+        "https://www.instagram.com/nafha.life",
+        "https://www.twitter.com/nafha_life"
+      ]
+    })} />
+
+    <!-- JSON-LD: Page-specific Schema (e.g., Product) -->
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
 
     <!-- Pre-hydration language detection to prevent flash -->
     <script is:inline>

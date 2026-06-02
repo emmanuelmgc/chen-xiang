@@ -23,9 +23,29 @@ export function getStaticPaths() {
 
 const { id } = Astro.params
 const product = getProductById(id)
+
+// Construct Product JSON-LD schema
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": product.name_en,
+  "description": product.description_en,
+  "image": product.imageUrl,
+  "brand": {
+    "@type": "Brand",
+    "name": "Nafha | نفحة"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": new URL(Astro.url.pathname, "https://nafha.life").href,
+    "priceCurrency": "SAR",
+    "price": product.priceRange_en.includes("Price on request") ? undefined : product.priceRange_en.split("-")[0].trim(),
+    "availability": "https://schema.org/InStock"
+  }
+}
 ---
 
-<BaseLayout title={`${product.name_en} | Nafha`}>
+<BaseLayout title={`${product.name_en} | Nafha`} schema={productSchema}>
   <div class="min-h-screen flex flex-col bg-background">
     <CommonHeader client:only="vue" />
     
