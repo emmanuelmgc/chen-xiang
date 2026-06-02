@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import CommonHeader from '@/components/common/CommonHeader.vue'
+import CommonFooter from '@/components/common/CommonFooter.vue'
+import WhatsAppFloatingButton from '@/components/common/WhatsAppFloatingButton.vue'
+import ProductCatalogDownloadPage from '@/components/product-catalog-download/ProductCatalogDownloadPage.vue'
+---
+
+<BaseLayout title="Product Catalog | NAFHA">
+  <div class="min-h-screen flex flex-col bg-background">
+    <CommonHeader client:only="vue" />
+
+    <main class="flex-1">
+      <ProductCatalogDownloadPage client:only="vue" />
+    </main>
+
+    <WhatsAppFloatingButton client:only="vue" />
+    <CommonFooter client:only="vue" />
+  </div>
+</BaseLayout>
