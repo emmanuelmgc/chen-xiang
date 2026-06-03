@@ -172,7 +172,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
     certificates: [],
     howToUse: [
       { step: 1, title_ar: "سخن المبخرة", title_en: "Heat the Mabkhara", description_ar: "استخدم مبخرة كهربائية أو أشعل فحم بخور طبيعي.", description_en: "Use an electric mabkhara or light natural bakhoor charcoal.", iconName: "Sparkles" },
-      { step: 2, title_ar: "ضع الرقائق", title_en: "Place the Chips", description_ar: "ضع قطعة صغيرة من البخور مباشرة على مصدر الحرارة (أو فوق رقاقة عازلة).", description_en: "Place a small piece of bakhoor directly on the heat source (or on an insulator shim).", iconName: "Tongs" },
+      { step: 2, title_ar: "ضع الرقائق", title_en: "Place the Chips", description_ar: "ضع قطعة صغيرة من البخور مباشرة على مصدر الحرارة (أو فوق رقاقة عازلة).", description_en: "Place a small piece of bakhoor directly on the heat source (or on an insulator shim).", iconName: "Hand" },
       { step: 3, title_ar: "استمتع بالرائحة", title_en: "Enjoy the Aroma", description_ar: "اترك البخور ينتشر في أرجاء المكان لتعزيز الضيافة.", description_en: "Allow the bakhoor to spread throughout the space to enhance hospitality.", iconName: "Feather" }
     ],
     safetyNotice_ar: "يستخدم مع المبخرة فقط. لا تلمس الرقائق الساخنة. يُحفظ في مكان بارد وجاف لمنع التلف. تأكد من إطفاء المصدر بعد الانتهاء.",

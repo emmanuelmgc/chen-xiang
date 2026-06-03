@@ -48,7 +48,7 @@ const storyParagraphs = computed(() => {
           :class="(isClient || true) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
           :style="{ transitionDelay: `${(index + 1) * 100}ms` }"
         >
-          {{ paragraph }}。
+          {{ paragraph }}{{ locale === 'ar' ? '。' : '' }}
         </p>
       </div>
       
