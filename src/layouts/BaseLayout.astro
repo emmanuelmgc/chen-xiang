@@ -30,9 +30,8 @@ const currentUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl).href;
     <title>{title}</title>
     <link rel="canonical" href={currentUrl} />
 
-    <!-- Hreflang tags for AR/EN pages -->
-    <link rel="alternate" hreflang="ar" href={currentUrl} />
-    <link rel="alternate" hreflang="x-default" href={currentUrl} />
+    <!-- Hreflang: removed — site uses client-side language switching (localStorage), no separate URLs per language.
+         Add hreflang back when i18n routing is implemented (e.g., /ar/collections, /en/collections). -->
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -45,7 +44,7 @@ const currentUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl).href;
     <meta property="og:url" content={currentUrl} />
     <meta property="og:site_name" content="NAFHA" />
     <meta property="og:locale" content="ar_SA" />
-    <meta property="og:locale:alternate" content="en_US" />
+    <!-- og:locale:alternate: add back when English page URLs are available -->
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
