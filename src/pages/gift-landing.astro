@@ -11,7 +11,10 @@ const title_en = "Gift Sets - Nafha | مجموعات الهدايا - نفحة"
 const locale = 'ar' // server default, overridden client-side before paint
 ---
 
-<BaseLayout title={locale === 'ar' ? title_ar : title_en}>
+<BaseLayout 
+  title={locale === 'ar' ? title_ar : title_en}
+  description="Discover NAFHA's luxury gift sets featuring premium Oud and incense. Perfect for Eid, weddings, corporate gifting, and special occasions."
+>
   <div class="min-h-screen flex flex-col bg-background">
     <CommonHeader client:only="vue" />
     

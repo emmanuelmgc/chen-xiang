@@ -10,7 +10,10 @@ const title_en = "Journal - Nafha | مجلة نفحة"
 const locale = 'ar'
 ---
 
-<BaseLayout title={locale === 'ar' ? title_ar : title_en}>
+<BaseLayout 
+  title={locale === 'ar' ? title_ar : title_en}
+  description="Read NAFHA Journal for Oud insights, usage guides, hospitality tips, and stories about Oud craftsmanship and modern ritual practices."
+>
   <div class="min-h-screen flex flex-col bg-background">
     <CommonHeader client:only="vue" />
     

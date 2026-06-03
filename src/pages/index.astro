@@ -1,27 +1,14 @@
-
 ---
 // 根页面重定向到产品系列总览页
+import BaseLayout from '@/layouts/BaseLayout.astro'
 ---
 
-<!doctype html>
-<html lang="ar-SA" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="NAFHA | نفحة - Premium Oud, Bakhoor & Incense Products for GCC Market" />
-    <meta property="og:title" content="نفحة NAFHA - الصفحة الرئيسية" />
-    <meta property="og:description" content="NAFHA transforms Oud into a lighter, cleaner, modern ritual of hospitality." />
-    <meta property="og:image" content="https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/2e7297be-4a3c-4f3a-bd52-c7a15da1a42e.png" />
-    <link rel="canonical" href="https://nafha.life/" />
-    <title>نفحة NAFHA - الصفحة الرئيسية</title>
-    <meta http-equiv="refresh" content="0; url=./collections.html" />
-  </head>
-  <body>
-    <script is:inline>
-      window.location.href = './collections.html';
-    </script>
-    <noscript>
-      <meta http-equiv="refresh" content="0; url=./collections.html" />
-    </noscript>
-  </body>
-</html>
+<BaseLayout 
+  title="NAFHA | نفحة - Premium Oud & Incense"
+  description="NAFHA offers premium low-smoke Oud products for modern hospitality. Explore our collections of incense sticks, bakhoor, and luxury gift sets."
+>
+  <script is:inline>
+    window.location.href = './collections.html';
+  </script>
+  <p class="text-center p-8">Redirecting to <a href="./collections.html">collections</a>...</p>
+</BaseLayout>

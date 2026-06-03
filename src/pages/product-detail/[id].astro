@@ -45,7 +45,11 @@ const productSchema = {
 }
 ---
 
-<BaseLayout title={`${product.name_en} | Nafha`} schema={productSchema}>
+<BaseLayout 
+  title={`${product.name_en} | Nafha`} 
+  description={product.description_en}
+  schema={productSchema}
+>
   <div class="min-h-screen flex flex-col bg-background">
     <CommonHeader client:only="vue" />
     

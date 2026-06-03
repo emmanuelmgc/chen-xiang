@@ -10,6 +10,7 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "validate-data": "tsx scripts/validate-data.ts",
+    "scan-placeholders": "tsx scripts/scan-placeholders.ts",
     "prebuild": "npm run validate-data"
   },
   "dependencies": {
