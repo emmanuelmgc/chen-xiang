@@ -1,0 +1,354 @@
+{
+  "matches": [
+    {
+      "file": "..\\src\\data\\b2b_content.ts",
+      "line": 134,
+      "column": 128,
+      "match": "+966XXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "{ id: \"whatsapp\", label_ar: \"رقم الـ WhatsApp*\", label_en: \"WhatsApp Number*\", type: 'tel', required: true, placeholder_ar: \"+966XXXXXXXXX\", placeholder_en: \"+966XXXXXXXXX\" },"
+    },
+    {
+      "file": "..\\src\\data\\blog_posts.ts",
+      "line": 23,
+      "column": 31,
+      "match": "placeholder-1.svg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "coverImage: '/images/blog/placeholder-1.svg',"
+    },
+    {
+      "file": "..\\src\\data\\blog_posts.ts",
+      "line": 36,
+      "column": 31,
+      "match": "placeholder-2.svg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "coverImage: '/images/blog/placeholder-2.svg',"
+    },
+    {
+      "file": "..\\src\\data\\blog_posts.ts",
+      "line": 49,
+      "column": 31,
+      "match": "placeholder-3.svg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "coverImage: '/images/blog/placeholder-3.svg',"
+    },
+    {
+      "file": "..\\src\\data\\blog_posts.ts",
+      "line": 62,
+      "column": 31,
+      "match": "placeholder-4.svg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "coverImage: '/images/blog/placeholder-4.svg',"
+    },
+    {
+      "file": "..\\src\\data\\blog_posts.ts",
+      "line": 75,
+      "column": 31,
+      "match": "placeholder-5.svg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "coverImage: '/images/blog/placeholder-5.svg',"
+    },
+    {
+      "file": "..\\src\\data\\blog_posts.ts",
+      "line": 88,
+      "column": 31,
+      "match": "placeholder-6.svg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "coverImage: '/images/blog/placeholder-6.svg',"
+    },
+    {
+      "file": "..\\src\\data\\contact_info.ts",
+      "line": 27,
+      "column": 20,
+      "match": "+96650XXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "whatsappNumber: \"+96650XXXXXXX\", // KSA mock number"
+    },
+    {
+      "file": "..\\src\\data\\contact_info.ts",
+      "line": 27,
+      "column": 20,
+      "match": "+96650XXXXXXX",
+      "rule": "Test Phone Number",
+      "severity": "error",
+      "context": "whatsappNumber: \"+96650XXXXXXX\", // KSA mock number"
+    },
+    {
+      "file": "..\\src\\data\\contact_info.ts",
+      "line": 29,
+      "column": 17,
+      "match": "+96611XXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "phoneNumber: \"+96611XXXXXXX\","
+    },
+    {
+      "file": "..\\src\\data\\contact_info.ts",
+      "line": 29,
+      "column": 17,
+      "match": "+96611XXXXXXX",
+      "rule": "Test Phone Number",
+      "severity": "error",
+      "context": "phoneNumber: \"+96611XXXXXXX\","
+    },
+    {
+      "file": "..\\src\\data\\contact_info.ts",
+      "line": 32,
+      "column": 43,
+      "match": "XXXXXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "googleMapsUrl: \"https://maps.app.goo.gl/XXXXXXX\", // Placeholder"
+    },
+    {
+      "file": "..\\src\\data\\contact_info.ts",
+      "line": 32,
+      "column": 27,
+      "match": "maps.app.goo.gl/XXXXXXX",
+      "rule": "Placeholder Map URL",
+      "severity": "error",
+      "context": "googleMapsUrl: \"https://maps.app.goo.gl/XXXXXXX\", // Placeholder"
+    },
+    {
+      "file": "..\\src\\data\\contact_info.ts",
+      "line": 45,
+      "column": 31,
+      "match": "example.com",
+      "rule": "Example Domain",
+      "severity": "error",
+      "context": "catalogDownloadUrl: \"http://example.com/NAFHA_Catalog_2026.pdf\" // 目录下载链接"
+    },
+    {
+      "file": "..\\src\\data\\gift_sets.ts",
+      "line": 31,
+      "column": 27,
+      "match": "placeholder-1.jpg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "image: \"/images/gifts/placeholder-1.jpg\","
+    },
+    {
+      "file": "..\\src\\data\\gift_sets.ts",
+      "line": 43,
+      "column": 27,
+      "match": "placeholder-2.jpg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "image: \"/images/gifts/placeholder-2.jpg\","
+    },
+    {
+      "file": "..\\src\\data\\gift_sets.ts",
+      "line": 55,
+      "column": 27,
+      "match": "placeholder-3.jpg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "image: \"/images/gifts/placeholder-3.jpg\","
+    },
+    {
+      "file": "..\\src\\data\\gift_sets.ts",
+      "line": 67,
+      "column": 27,
+      "match": "placeholder-4.jpg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "image: \"/images/gifts/placeholder-4.jpg\","
+    },
+    {
+      "file": "..\\src\\data\\gift_sets.ts",
+      "line": 79,
+      "column": 27,
+      "match": "placeholder-5.jpg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "image: \"/images/gifts/placeholder-5.jpg\","
+    },
+    {
+      "file": "..\\src\\data\\gift_sets.ts",
+      "line": 91,
+      "column": 27,
+      "match": "placeholder-6.jpg",
+      "rule": "Placeholder Image Path",
+      "severity": "warning",
+      "context": "image: \"/images/gifts/placeholder-6.jpg\","
+    },
+    {
+      "file": "..\\src\\data\\legal_policies.ts",
+      "line": 34,
+      "column": 12,
+      "match": "KSA-VAT-30005XXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "vatTrn: \"KSA-VAT-30005XXX\", // Mock VAT number"
+    },
+    {
+      "file": "..\\src\\data\\products.ts",
+      "line": 24,
+      "column": 54,
+      "match": "السعر عند الطلب",
+      "rule": "Starting Price Placeholder",
+      "severity": "warning",
+      "context": "priceRange_ar: string; // e.g., \"79 - 129 SAR\" or \"السعر عند الطلب\""
+    },
+    {
+      "file": "..\\src\\data\\products.ts",
+      "line": 25,
+      "column": 54,
+      "match": "Price on request",
+      "rule": "Starting Price Placeholder",
+      "severity": "warning",
+      "context": "priceRange_en: string; // e.g., \"79 - 129 SAR\" or \"Price on request\""
+    },
+    {
+      "file": "..\\src\\layouts\\BaseLayout.astro",
+      "line": 66,
+      "column": 32,
+      "match": "XXXXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "\"telephone\": \"+966-XXX-XXXXXX\","
+    },
+    {
+      "file": "..\\src\\pages\\product-detail\\[id].astro",
+      "line": 42,
+      "column": 46,
+      "match": "Price on request",
+      "rule": "Starting Price Placeholder",
+      "severity": "warning",
+      "context": "\"price\": product.priceRange_en.includes(\"Price on request\") ? undefined : product.priceRange_en.split(\"-\")[0].trim(),"
+    },
+    {
+      "file": "..\\src\\test\\integration\\multilingual-data.test.ts",
+      "line": 39,
+      "column": 6,
+      "match": "XXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "/XXXX+/i,"
+    },
+    {
+      "file": "..\\src\\test\\integration\\multilingual-data.test.ts",
+      "line": 42,
+      "column": 6,
+      "match": "lorem ipsum",
+      "rule": "Lorem Ipsum",
+      "severity": "error",
+      "context": "/lorem ipsum/i,"
+    },
+    {
+      "file": "..\\src\\test\\integration\\multilingual-data.test.ts",
+      "line": 322,
+      "column": 42,
+      "match": "XXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "expect(contactString).not.toMatch(/XXXX/)"
+    },
+    {
+      "file": "..\\tests\\link-check.spec.ts",
+      "line": 64,
+      "column": 85,
+      "match": "XXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "expect(href, `Placeholder in link on ${page.name}: ${href}`).not.toContain('XXXX')"
+    },
+    {
+      "file": "..\\tests\\link-check.spec.ts",
+      "line": 66,
+      "column": 85,
+      "match": "example.com",
+      "rule": "Example Domain",
+      "severity": "error",
+      "context": "expect(href, `Placeholder in link on ${page.name}: ${href}`).not.toContain('example.com')"
+    },
+    {
+      "file": "..\\tests\\link-check.spec.ts",
+      "line": 87,
+      "column": 57,
+      "match": "XXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "// Check that the number is valid (not containing XXXX)"
+    },
+    {
+      "file": "..\\tests\\link-check.spec.ts",
+      "line": 88,
+      "column": 71,
+      "match": "XXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "expect(href, `Invalid WhatsApp number: ${href}`).not.toContain('XXXX')"
+    },
+    {
+      "file": "..\\tests\\link-check.spec.ts",
+      "line": 272,
+      "column": 76,
+      "match": "XXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "expect(href, `Placeholder in external link: ${href}`).not.toContain('XXXX')"
+    },
+    {
+      "file": "..\\tests\\link-check.spec.ts",
+      "line": 273,
+      "column": 76,
+      "match": "example.com",
+      "rule": "Example Domain",
+      "severity": "error",
+      "context": "expect(href, `Placeholder in external link: ${href}`).not.toContain('example.com')"
+    },
+    {
+      "file": "..\\tests\\link-check.spec.ts",
+      "line": 294,
+      "column": 87,
+      "match": "XXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "expect(src, `Invalid image src on ${pageInfo.name}: ${src}`).not.toContain('XXXX')"
+    },
+    {
+      "file": "..\\tests\\link-check.spec.ts",
+      "line": 300,
+      "column": 85,
+      "match": "XXXX",
+      "rule": "XXXX Placeholder",
+      "severity": "error",
+      "context": "expect(srcset, `Invalid image srcset on ${pageInfo.name}`).not.toContain('XXXX')"
+    }
+  ],
+  "summary": {
+    "total": 36,
+    "errors": 21,
+    "warnings": 15,
+    "byRule": {
+      "XXXX Placeholder": 14,
+      "Placeholder Image Path": 12,
+      "Test Phone Number": 2,
+      "Placeholder Map URL": 1,
+      "Example Domain": 3,
+      "Starting Price Placeholder": 3,
+      "Lorem Ipsum": 1
+    },
+    "byFile": {
+      "..\\src\\data\\b2b_content.ts": 1,
+      "..\\src\\data\\blog_posts.ts": 6,
+      "..\\src\\data\\contact_info.ts": 7,
+      "..\\src\\data\\gift_sets.ts": 6,
+      "..\\src\\data\\legal_policies.ts": 1,
+      "..\\src\\data\\products.ts": 2,
+      "..\\src\\layouts\\BaseLayout.astro": 1,
+      "..\\src\\pages\\product-detail\\[id].astro": 1,
+      "..\\src\\test\\integration\\multilingual-data.test.ts": 3,
+      "..\\tests\\link-check.spec.ts": 8
+    }
+  }
+}
