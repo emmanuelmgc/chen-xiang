@@ -37,13 +37,13 @@ onMounted(() => {
         :class="(isClient || true) ? 'animate-fade-in-up' : 'opacity-0 translate-y-5'"
       >
         <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">
-          {{ locale === 'ar' ? 'المصدر والحرفة' : 'Sourcing & Craft' }}
+          {{ locale === 'ar' ? 'المصدر والحرفة' : 'Sourcing & Craftsmanship' }}
         </h1>
         <p class="text-lg md:text-xl text-white/90">
-          {{ locale === 'ar' ? 'رحلة العود من الشجرة إلى طقسك' : 'The journey of Oud from tree to your ritual' }}
+          {{ locale === 'ar' ? 'رحلة العود من الشجرة إلى طقسك' : 'The journey of Oud from a tree to your ritual.' }}
         </p>
         <p class="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-          {{ locale === 'ar' ? 'نحن نؤمن بالشفافية الكاملة. تعرف على كيفية اختيارنا لأفضل المواد الخام وتحويلها إلى منتجات استثنائية' : 'We believe in complete transparency. Learn how we source the finest raw materials and transform them into exceptional products' }}
+          {{ locale === 'ar' ? 'نحن نؤمن بالشفافية الكاملة. تعرف على كيفية اختيارنا لأفضل المواد الخام وتحويلها إلى منتجات استثنائية' : 'We believe in complete transparency. Learn how we source selected raw materials and transform them into refined aromatic products.' }}
         </p>
       </div>
     </div>

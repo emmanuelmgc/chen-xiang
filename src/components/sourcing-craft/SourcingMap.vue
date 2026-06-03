@@ -51,7 +51,7 @@ const sourcingDetails = [
         {{ locale === 'ar' ? 'مناطق المصدر الرئيسية' : 'Key Sourcing Regions' }}
       </h2>
       <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-        {{ locale === 'ar' ? 'نختار مواد خامنا من أفضل مناطق زراعة العود في العالم' : 'We source our raw materials from the world\'s finest Oud cultivation regions' }}
+        {{ locale === 'ar' ? 'نختار مواد خامنا من أفضل مناطق إنتاج العود في العالم' : "We source our raw materials from selected Oud-producing regions" }}
       </p>
     </div>
 

@@ -18,25 +18,29 @@ const materials = computed(() => [
     id: 'resin-content',
     title: locale.value === 'ar' ? 'محتوى الراتنج والكثافة' : 'Resin Content & Density',
     titleEn: 'Resin Content & Density',
-    content: locale.value === 'ar' ? 'نختار العود بمحتوى راتنجي يتراوح بين 15% و 40%، وهو النطاق المثالي للحصول على توازن بين الرائحة والاحتراق النظيف. نستخدم تقنية الكربنة المنخفضة الحرارة والمواد اللاصقة النباتية لتقليل الدخان بنسبة 60% أثناء الحرق، مما يضمن عدم وجود رائحة قاسية أو بقايا سوداء.' : 'We select Oud with resin content between 15% and 40%, the ideal range for balancing fragrance and clean burning. Using low-temperature charring and plant-based binders, we reduce smoke by 60% during burning, ensuring no harsh odors or black residue.',
+    // OWNER_CONFIRMATION_REQUIRED: "60% smoke reduction" specific claim needs verification
+    content: locale.value === 'ar' ? 'نختار العود بمحتوى راتنجي يحقق توازناً مثالياً بين الرائحة والاحتراق النظيف. نستخدم تقنية الكربنة المنخفضة الحرارة والمواد اللاصقة النباتية للمساعدة في تقليل الدخان أثناء الحرق، مما يضمن تجربة احتراق نظيفة وهادئة.' : 'We select Oud with resin content that achieves an ideal balance between fragrance and clean burning. Using low-temperature charring and plant-based binders, we help reduce smoke during burning, ensuring a clean and pleasant experience.',
   },
   {
     id: 'burning-time',
     title: locale.value === 'ar' ? 'وقت الاحتراق المتحكم فيه' : 'Controlled Burning Time',
     titleEn: 'Controlled Burning Time',
-    content: locale.value === 'ar' ? 'من خلال ضبط كثافة العود وتكوين الخيط الأساسي، نحقق أوقات احتراق يمكن التحكم فيها. الأعواد القصيرة تحترق بثبات لمدة 30 دقيقة، بينما الأعواد الطويلة قد تصل إلى ساعتين. هذا يضمن إطلاق الرائحة بشكل متساوٍ ومستمر دون تقلبات.' : 'By adjusting Oud density and core composition, we achieve controlled burning times. Short sticks burn steadily for 30 minutes, while long sticks reach up to 2 hours. This ensures consistent and even fragrance release without fluctuations.',
+    // OWNER_CONFIRMATION_REQUIRED: specific burn time minutes need product data confirmation
+    content: locale.value === 'ar' ? 'من خلال ضبط كثافة العود وتكوين الخيط الأساسي، نحقق احتراقاً ثابتاً ومتحكماً فيه. يضمن ذلك إطلاق الرائحة بشكل متساوٍ ومستمر طوال فترة الاحتراق.' : 'By adjusting Oud density and core composition, we achieve a stable, controlled burn. This ensures consistent and even fragrance release throughout the burning duration.',
   },
   {
     id: 'extraction-methods',
     title: locale.value === 'ar' ? 'طرق استخلاص الزيوت العطرية' : 'Essential Oil Extraction Methods',
     titleEn: 'Essential Oil Extraction Methods',
-    content: locale.value === 'ar' ? 'نستخدم طريقتين رئيسيتين: الاستخلاص بثاني أكسيد الكربون فوق الحرج (عملية حديثة، درجة حرارة منخفضة، بدون بقايا كيميائية، سعر أقل) والتقطير بالبخار (الطريقة التقليدية، تحافظ على الرائحة الطبيعية، معدل استخراج أقل، سعر أعلى). كلا الطريقتين توفران نقاء عالياً وخصائص عطرية متميزة.' : 'We employ two primary methods: Supercritical CO2 Extraction (modern, low-temperature, no chemical residue, lower cost) and Steam Distillation (traditional, preserves natural aroma, lower yield, higher cost). Both deliver high purity and exceptional aromatic properties.',
+    // OWNER_CONFIRMATION_REQUIRED: Supercritical CO₂ extraction claim needs verification
+    content: locale.value === 'ar' ? 'نحن نولي اهتماماً بالغاً لمعالجة المواد الخام بطرق تحافظ على جودتها العطرية وتضمن نقاءها. نسعى إلى تحقيق أعلى معايير الجودة في كل مرحلة من مراحل الإنتاج.' : 'We pay careful attention to processing raw materials in ways that preserve their aromatic quality and ensure purity. We aim for the highest quality standards at every stage of production.',
   },
   {
     id: 'quality-control',
-    title: locale.value === 'ar' ? 'مراقبة الجودة والاختبار' : 'Quality Control & Testing',
-    titleEn: 'Quality Control & Testing',
-    content: locale.value === 'ar' ? 'كل دفعة من منتجاتنا تخضع لاختبارات صارمة تشمل: اختبار الاحتراق (للتحقق من نقاء الدخان)، اختبار الرائحة (للتأكد من اتساق الخصائص العطرية)، واختبار السلامة (للتحقق من خلو المنتج من المواد الكيميائية الضارة). نحتفظ بسجلات مفصلة لكل دفعة لضمان الشفافية والمساءلة.' : 'Every batch undergoes rigorous testing including: burn tests (smoke purity), aroma tests (aromatic consistency), and safety tests (harmful chemical absence). We maintain detailed batch records for full transparency and accountability.',
+    title: locale.value === 'ar' ? 'مراقبة الجودة' : 'Quality Control',
+    titleEn: 'Quality Control',
+    // OWNER_CONFIRMATION_REQUIRED: "rigorous testing" and "harmful chemicals" claims need verification
+    content: locale.value === 'ar' ? 'نولي اهتماماً كبيراً بجودة الاحتراق واتساق الخصائص العطرية وسلامة المنتج. نسعى للحفاظ على معايير ثابتة في كل دفعة.' : 'We pay close attention to burn performance, aromatic consistency, and product safety. We work to maintain consistent standards across every batch.',
   },
 ])
 </script>

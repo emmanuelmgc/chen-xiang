@@ -69,7 +69,7 @@ onMounted(() => {
       
       <!-- Quick Contact -->
       <div class="p-6 rounded-lg bg-card border border-border/30">
-        <h3 class="font-bold text-foreground mb-4">{{ locale === 'ar' ? 'تواصل سريع' : 'Quick Contact' }}</h3>
+        <h3 class="font-bold text-foreground mb-4">{{ locale === 'ar' ? 'معلومات الاتصال' : 'Contact Information' }}</h3>
         <div class="space-y-3">
           <a 
             :href="`tel:${CONTACT_INFO.phoneNumber}`"

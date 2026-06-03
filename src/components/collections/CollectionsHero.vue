@@ -43,10 +43,10 @@ onMounted(() => {
           {{ locale === 'ar' ? 'استكشف مجموعات نفحة' : 'Explore Nafha Collections' }}
         </h1>
         <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-          {{ locale === 'ar' ? 'تجربة عطرية فاخرة من الأعود والبخور المختارة بعناية' : 'A luxurious aromatic experience of carefully selected Oud and Bakhoor' }}
+          {{ locale === 'ar' ? 'تجربة عطرية فاخرة من الأعود والبخور المختارة بعناية' : 'A luxurious aromatic experience crafted from carefully selected Oud and Bakhoor.' }}
         </p>
         <p class="text-sm md:text-base text-white/70">
-          A Clean Ritual of Oud
+          A Clean Oud Ritual
         </p>
       </div>
 

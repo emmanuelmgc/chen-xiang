@@ -19,7 +19,9 @@ onMounted(() => {
 // Split story into paragraphs based on locale
 const storyParagraphs = computed(() => {
   const story = locale.value === 'ar' ? BRAND_STORY_CONTENT.longStory_ar : BRAND_STORY_CONTENT.longStory_en
-  return story.split('。').filter(p => p.trim())
+  // Arabic uses Chinese period 。as separator; English uses \n\n
+  const separator = locale.value === 'ar' ? '。' : '\n\n'
+  return story.split(separator).filter(p => p.trim())
 })
 </script>
 

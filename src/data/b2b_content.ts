@@ -64,7 +64,7 @@ export const B2B_VALUE_PROPS: B2BValuePropModel[] = [
     title_ar: "هدايا ومناسبات خاصة",
     title_en: "Corporate Gifting & Events",
     description_ar: "تخصيص مجموعات هدايا فاخرة لحفلات الزفاف، المؤتمرات، وتوزيعات العيد.",
-    description_en: "Customizing luxury gift sets for weddings, conferences, and Eid handouts.",
+    description_en: "Customize luxury gift sets for weddings, conferences, and Eid giveaways.",
   },
 ];
 
@@ -90,7 +90,7 @@ export const B2B_USE_CASES: B2BUseCaseModel[] = [
     title_ar: "أجنحة الإقامة الفاخرة",
     title_en: "Luxury Guest Suites",
     description_ar: "إدخال أعواد البخور منخفضة الدخان كجزء من روتين الاسترخاء المسائي للنزلاء.",
-    description_en: "Incorporating low-smoke incense sticks as part of the evening relaxation ritual for guests.",
+    description_en: "Incorporating low-smoke incense sticks as part of an evening relaxation ritual for guests.",
     imageUrl: "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/0fa14d26-ecf0-4d71-a300-33e5cbe494e9.png",
   },
   {

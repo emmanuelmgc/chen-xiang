@@ -36,7 +36,7 @@ const labels = {
       </div>
       
       <!-- Content -->
-      <div :class="index % 2 === 1 ? 'md:order-1' : 'md:order-2'">
+      <div :class="index % 2 === 1 ? 'md:order-1 px-4 md:px-0' : 'md:order-2 px-4 md:px-0'">
         <h3 class="text-2xl md:text-3xl font-bold text-foreground mb-4">
           {{ locale === 'ar' ? useCase.title_ar : useCase.title_en }}
         </h3>

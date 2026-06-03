@@ -49,12 +49,12 @@ const getAnswer = (faq: FAQModel) => {
           :value="faq.id"
           class="border-b border-border/30"
         >
-          <AccordionTrigger class="text-right hover:text-primary transition-colors py-4">
-            <span class="text-lg font-bold text-foreground">
+          <AccordionTrigger :class="[locale === 'ar' ? 'text-right' : 'text-left', 'hover:text-primary', 'transition-colors', 'py-4']">
+            <span :class="[locale === 'ar' ? 'text-right' : 'text-left', 'text-lg', 'font-bold', 'text-foreground']">
               {{ getQuestion(faq) }}
             </span>
           </AccordionTrigger>
-          <AccordionContent class="text-right pb-4">
+          <AccordionContent :class="[locale === 'ar' ? 'text-right' : 'text-left', 'pb-4']">
             <p class="text-base text-muted-foreground leading-relaxed">
               {{ getAnswer(faq) }}
             </p>

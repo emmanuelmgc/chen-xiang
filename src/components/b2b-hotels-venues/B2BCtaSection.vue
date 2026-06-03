@@ -22,8 +22,8 @@ function navigateToContact() {
 const content = {
   title_ar: 'هل لديك أسئلة؟',
   title_en: 'Have Questions?',
-  description_ar: 'فريقنا متاح للإجابة على جميع استفساراتك والمساعدة في إيجاد الحل المناسب لعملك',
-  description_en: 'Our team is available to answer all your inquiries and help find the right solution for your business',
+  description_ar: 'فريقنا متاح للإجابة على جميع أسئلتك وتصميم الحل المناسب لعملك',
+  description_en: 'Our team is available to answer all your questions and design the right solution for your business',
   whatsappBtn_ar: 'تواصل عبر واتساب',
   whatsappBtn_en: 'Contact via WhatsApp',
   contactBtn_ar: 'اتصل بنا',

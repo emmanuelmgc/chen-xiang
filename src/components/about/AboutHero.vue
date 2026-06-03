@@ -44,12 +44,12 @@ onMounted(() => {
         
         <!-- Subtitle -->
         <p class="text-lg md:text-xl text-white/90 mb-6 font-light">
-          {{ locale === 'ar' ? 'قصة العود، والحرفة، والاحترام' : 'The story of Oud, Craft, and Respect' }}
+          {{ locale === 'ar' ? 'قصة العود، والحرفة، والاحترام' : 'The Story of Oud, Craftsmanship, and Respect' }}
         </p>
         
         <!-- English Tagline -->
         <p class="text-sm md:text-base text-white/80 font-light tracking-wide">
-          {{ locale === 'ar' ? 'طقس نظيف للعود' : 'A clean ritual of Oud' }}
+          {{ locale === 'ar' ? 'طقس نظيف للعود' : 'A Clean Oud Ritual' }}
         </p>
       </div>
     </div>

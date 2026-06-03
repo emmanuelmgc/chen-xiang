@@ -81,7 +81,7 @@ const sortLabels = {
             {{ locale === 'ar' ? content.title_ar : content.title_en }}
           </h2>
           <p class="text-muted-foreground">
-            {{ products.length }} {{ locale === 'ar' ? content.productsCount_ar : content.productsCount_en }}
+            {{ products.length }} {{ locale === 'ar' ? (products.length === 1 ? 'منتج متاح' : 'منتجات متاحة') : (products.length === 1 ? 'product available' : 'products available') }}
           </p>
         </div>
 

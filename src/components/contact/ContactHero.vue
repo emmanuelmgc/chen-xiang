@@ -42,7 +42,7 @@ onMounted(() => {
           {{ locale === 'ar' ? 'اتصل بنا' : 'Contact Us' }}
         </h1>
         <p class="text-lg md:text-xl text-white/90 mb-6">
-          {{ locale === 'ar' ? 'نحن هنا للإجابة على جميع استفساراتك' : "We're here to answer all your inquiries" }}
+          {{ locale === 'ar' ? 'نحن هنا للإجابة على جميع أسئلتك' : "We're here to answer all your questions." }}
         </p>
       </div>
     </div>
