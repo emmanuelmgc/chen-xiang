@@ -47,7 +47,7 @@ export interface ProductSpecModel {
   smokeLevel_en: string; // e.g., "Very Low"
   recommendedRoomSize_ar: string; // 例如: "10-25 متر مربع"
   recommendedRoomSize_en: string; // e.g., "10-25 Sqm"
-  material_ar: string; // 原材�?
+  material_ar: string; // 原材料
   material_en: string;
 }
 

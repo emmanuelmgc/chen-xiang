@@ -104,8 +104,8 @@ export const PROCESS_STEPS: StoryProcessStepModel[] = [
 export const QUALITY_PROMISE_HIGHLIGHTS = {
   title_ar: "ضمان الجودة والشفافية",
   title_en: "Quality and Transparency",
-  // OWNER_CONFIRMATION_REQUIRED: "free from harmful chemicals" and "certifications" claims need verification
-  summary_ar: "نحن ملتزمون بتحسين الشفافية في المصادر والإنتاج والمعلومات. نركز على تجربة عطرية حقيقية مع الاهتمام بجودة الاحتراق واتساق الرائحة وسلامة المنتج.",
+  // OWNER_CONFIRMATION_REQUIRED: "free from harmful chemicals" and "certifications" claims removed pending verification
+  summary_ar: "نحن ملتزمون بتحسين الشفافية عبر المصادر والإنتاج ومعلومات المنتج. نركز على تجربة عطرية حقيقية مع اهتمام دقيق بأداء الاحتراق واتساق الرائحة وسلامة المنتج.",
   summary_en: "We are committed to improving transparency across sourcing, production, and product information. We focus on a genuine fragrance experience with careful attention to burn performance, aromatic consistency, and product safety.",
   // Links to compliance documents
   complianceLinks: [
