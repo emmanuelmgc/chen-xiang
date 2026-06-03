@@ -55,20 +55,9 @@ const sourcingDetails = [
       </p>
     </div>
 
-    <!-- Map Container -->
-    <div
-      class="relative w-full rounded-2xl overflow-hidden shadow-card transition-all duration-500"
-      :class="(isClient || true) ? 'opacity-100' : 'opacity-0'"
-    >
-      <img
-        :src="BRAND_STORY_CONTENT.sourcingMapImage"
-        :alt="locale === 'ar' ? 'خريطة مناطق المصدر' : 'Sourcing Regions Map'"
-        class="w-full h-auto object-cover"
-      />
-    </div>
-
-    <!-- Sourcing Details Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+    <!-- REAL_ASSET_REQUIRED: Replace with simple SVG or verified sourcing region cards -->
+    <!-- Sourcing Regions Info Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
       <div v-for="(detail, index) in sourcingDetails" :key="index" class="p-6 rounded-xl border border-border/30 bg-card hover:shadow-card transition-shadow">
         <h3 class="text-xl font-bold text-foreground mb-3">
           {{ locale === 'ar' ? detail.title_ar : detail.title_en }}

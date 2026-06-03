@@ -21,7 +21,7 @@ onMounted(() => {
 
 const content = {
   exploreBtn_ar: 'استكشف المجموعة',
-  exploreBtn_en: 'Explore Collection',
+  exploreBtn_en: 'Explore the Collection',
   learnMore_ar: 'تعرّف على الاستخدام',
   learnMore_en: 'Learn More',
 }

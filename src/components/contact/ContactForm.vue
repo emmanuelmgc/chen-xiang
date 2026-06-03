@@ -57,8 +57,8 @@ const labels = computed(() => ({
   submitting: locale.value === 'ar' ? 'جاري الإرسال...' : 'Sending...',
   successTitle: locale.value === 'ar' ? 'تم إرسال رسالتك بنجاح' : 'Your message has been sent successfully',
   successText: locale.value === 'ar' ? 'سنرد عليك قريباً' : "We'll get back to you soon",
-  privacyNote: locale.value === 'ar' ? 'نحن نحترم خصوصيتك. اقرأ سياسة الخصوصية الخاصة بنا' : "We respect your privacy. Read our Privacy Policy",
-  privacyLink: locale.value === 'ar' ? 'هنا' : 'here',
+  privacyNote: locale.value === 'ar' ? 'نحن نحترم خصوصيتك. اقرأ' : "We respect your privacy. Read our",
+  privacyLink: locale.value === 'ar' ? 'سياسة الخصوصية وملفات تعريف الارتباط' : 'Privacy Policy',
 }))
 
 const validateForm = (): boolean => {

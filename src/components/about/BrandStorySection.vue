@@ -50,21 +50,37 @@ const storyParagraphs = computed(() => {
         </p>
       </div>
       
-      <!-- Sourcing Image & Description -->
-      <div 
-        class="mt-16 md:mt-20 transition-all duration-700"
-        :class="(isClient || true) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
-      >
-        <div class="rounded-lg overflow-hidden shadow-card mb-6">
-          <img 
-            :src="BRAND_STORY_CONTENT.sourcingMapImage"
-            :alt="locale === 'ar' ? 'خريطة مصادر العود' : 'Oud Sourcing Map'"
-            class="w-full h-auto object-cover"
-          />
+      <!-- REAL_ASSET_REQUIRED: Sourcing region info cards (no unverified map) -->
+      <div class="mt-16 md:mt-20">
+        <h3 class="text-2xl font-bold text-foreground mb-6">
+          {{ locale === 'ar' ? 'مناطق مصادر العود' : 'Oud Sourcing Regions' }}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-xl border border-border/30 bg-card">
+            <h4 class="text-lg font-semibold text-foreground mb-2">
+              {{ locale === 'ar' ? 'العود الكينام المحلي' : 'Local Qinan Oud' }}
+            </h4>
+            <p class="text-sm text-muted-foreground">
+              {{ locale === 'ar' ? 'مناطق متخصصة معروفة بجودة عالية' : 'Specialized regions known for high quality' }}
+            </p>
+          </div>
+          <div class="p-6 rounded-xl border border-border/30 bg-card">
+            <h4 class="text-lg font-semibold text-foreground mb-2">
+              {{ locale === 'ar' ? 'جنوب شرق آسيا' : 'Southeast Asia' }}
+            </h4>
+            <p class="text-sm text-muted-foreground">
+              {{ locale === 'ar' ? 'هاينان، فيتنام، قوانغشي' : 'Hainan, Vietnam, Guangxi' }}
+            </p>
+          </div>
+          <div class="p-6 rounded-xl border border-border/30 bg-card">
+            <h4 class="text-lg font-semibold text-foreground mb-2">
+              {{ locale === 'ar' ? 'عملية التعتيق' : 'Aging Process' }}
+            </h4>
+            <p class="text-sm text-muted-foreground">
+              {{ locale === 'ar' ? 'تعتيق دقيق لضمان الجودة' : 'Careful aging to ensure quality' }}
+            </p>
+          </div>
         </div>
-        <p class="text-base md:text-lg text-foreground leading-relaxed">
-          {{ locale === 'ar' ? BRAND_STORY_CONTENT.sourcingDescription_ar : BRAND_STORY_CONTENT.sourcingDescription_en }}
-        </p>
       </div>
     </div>
   </section>

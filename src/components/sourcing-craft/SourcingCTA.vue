@@ -35,7 +35,7 @@ const whatsappUrl = computed(() => {
           as="a"
           href="./collections.html"
         >
-          <span>{{ locale === 'ar' ? 'استكشف المجموعة' : 'Explore Collection' }}</span>
+          <span>{{ locale === 'ar' ? 'استكشف المجموعة' : 'Explore the Collection' }}</span>
           <SafeIcon name="ArrowLeft" :size="20" class="mr-2" />
         </Button>
 
@@ -58,7 +58,7 @@ const whatsappUrl = computed(() => {
         <p class="text-sm text-muted-foreground">
           {{ locale === 'ar' ? 'لديك أسئلة حول عملية الإنتاج أو المواد؟' : 'Have questions about the production process or materials?' }}
           <a href="./help-center.html" class="text-primary font-medium hover:underline">
-            {{ locale === 'ar' ? 'زر مركز المساعدة' : 'Visit Help Center' }}
+            {{ locale === 'ar' ? 'زر مركز المساعدة' : 'Visit our Help Center' }}
           </a>
         </p>
       </div>

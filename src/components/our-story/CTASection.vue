@@ -53,7 +53,7 @@ const whatsappUrl = computed(() => {
             as="a"
             href="./collections.html"
           >
-            {{ locale === 'ar' ? 'استكشف المجموعة' : 'Explore Collection' }}
+            {{ locale === 'ar' ? 'استكشف المجموعة' : 'Explore the Collection' }}
             <SafeIcon name="ArrowLeft" :size="20" class="mr-2" />
           </Button>
           <Button

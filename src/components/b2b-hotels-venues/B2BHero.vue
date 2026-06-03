@@ -84,7 +84,7 @@ function navigateToWhatsApp() {
             class="bg-primary hover:bg-primary/90 text-primary-foreground font-bold"
             @click="scrollToForm"
           >
-            {{ locale === 'ar' ? 'اطلب عرض سعر' : 'Request Quote' }}
+            {{ locale === 'ar' ? 'اطلب عرض سعر' : 'Request a Quote' }}
           </Button>
           <Button
             size="lg"

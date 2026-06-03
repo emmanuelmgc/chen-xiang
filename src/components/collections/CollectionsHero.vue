@@ -61,7 +61,7 @@ onMounted(() => {
           as="a"
           href="./incense-sticks-category.html"
         >
-          {{ locale === 'ar' ? 'استكشف المجموعة' : 'Explore Collection' }}
+          {{ locale === 'ar' ? 'استكشف المجموعة' : 'Explore the Collection' }}
           <SafeIcon name="ArrowLeft" :size="20" class="mr-2" />
         </Button>
         <Button

@@ -76,7 +76,7 @@ onMounted(() => {
             class="bg-accent hover:bg-accent/90 text-accent-foreground"
           >
             <SafeIcon name="ShoppingBag" :size="20" class="ml-2" />
-            {{ locale === 'ar' ? 'استكشف المجموعة' : 'Explore Collection' }}
+            {{ locale === 'ar' ? 'استكشف المجموعة' : 'Explore the Collection' }}
           </Button>
         </div>
       </div>

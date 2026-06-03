@@ -126,9 +126,8 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       batch_number: "NAF2025Q4-001", year_ar: "2023 تجميع", year_en: "2023 Harvest",
       grade_ar: "A+", grade_en: "A+",
     },
-    certificates: [
-      { id: "safety", title_ar: "شهادة السلامة للمواد", title_en: "Material Safety Certificate", summary_ar: "يؤكد خلوه من الملوثات الشائعة والملحقات الكيميائية", summary_en: "Confirms absence of common pollutants and chemical additives", imageUrl: "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/f4c494b6-0de8-461c-8c33-7055e99b8f93.png" },
-    ],
+    // REAL_ASSET_REQUIRED: Add real certificate data when available (PDF/scans, not AI images)
+    certificates: [],
     howToUse: [
       { step: 1, title_ar: "أشعل الطرف", title_en: "Light the Tip", description_ar: "أشعل طرف العود ثم اتركه ليحترق لمدة 5 ثواني.", description_en: "Light the tip of the stick and allow it to burn for 5 seconds.", iconName: "Flame" },
       { step: 2, title_ar: "أطفئ الشعلة", title_en: "Blow out the Flame", description_ar: "أطفئ الشعلة بلطف، واترك العود يدخن فقط.", description_en: "Gently blow out the flame, allowing the stick to only smolder.", iconName: "Sunrise" },
@@ -169,9 +168,8 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
       batch_number: "BAK2025Q3-005", year_ar: "2024 تحضير", year_en: "2024 Prepared",
       grade_ar: "ممتاز", grade_en: "Excellent",
     },
-    certificates: [
-      { id: "traceability", title_ar: "شهادة مصدر العود", title_en: "Oud Source Traceability", summary_ar: "توثيق مصدر العود وجودته بناءً على الدفعة", summary_en: "Documentation of Oud source and quality based on batch" , imageUrl: "https://spark-builder.s3.cn-north-1.amazonaws.com.cn/image/2026/1/8/68d2f37e-326b-4e03-bff6-fba5328fa463.png"}
-    ],
+    // REAL_ASSET_REQUIRED: Add real certificate data when available (PDF/scans, not AI images)
+    certificates: [],
     howToUse: [
       { step: 1, title_ar: "سخن المبخرة", title_en: "Heat the Mabkhara", description_ar: "استخدم مبخرة كهربائية أو أشعل فحم بخور طبيعي.", description_en: "Use an electric mabkhara or light natural bakhoor charcoal.", iconName: "Sparkles" },
       { step: 2, title_ar: "ضع الرقائق", title_en: "Place the Chips", description_ar: "ضع قطعة صغيرة من البخور مباشرة على مصدر الحرارة (أو فوق رقاقة عازلة).", description_en: "Place a small piece of bakhoor directly on the heat source (or on an insulator shim).", iconName: "Tongs" },

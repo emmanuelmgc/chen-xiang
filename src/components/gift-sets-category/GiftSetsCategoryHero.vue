@@ -23,9 +23,9 @@ onMounted(() => {
 
 const content = {
   exploreBtn_ar: 'استكشف المجموعات',
-  exploreBtn_en: 'Explore Collections',
+  exploreBtn_en: 'Explore the Collection',
   customOrder_ar: 'طلب مخصص للشركات',
-  customOrder_en: 'Corporate Custom Orders',
+  customOrder_en: 'Custom Corporate Orders',
 }
 </script>
 

@@ -17,7 +17,7 @@ defineProps<Props>()
 
 const content = {
   exploreBtn_ar: 'استكشف المجموعة',
-  exploreBtn_en: 'Explore Collection',
+  exploreBtn_en: 'Explore the Collection',
   whatsappBtn_ar: 'تواصل عبر واتساب',
   whatsappBtn_en: 'Contact via WhatsApp',
 }
