@@ -120,8 +120,6 @@ export default defineConfig({
   build: {
     concurrency: 4,
     format: 'file',
-    assets: '',
-    assetsPrefix: '.',
     rollupOptions: {
       maxParallelFileOps: 24,
       output: {
