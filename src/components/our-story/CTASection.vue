@@ -51,7 +51,7 @@ const whatsappUrl = computed(() => {
             size="lg"
             class="bg-primary hover:bg-primary/90 text-primary-foreground"
             as="a"
-            href="./collections.html"
+            href="/collections.html"
           >
             {{ locale === 'ar' ? 'استكشف المجموعة' : 'Explore the Collection' }}
             <SafeIcon name="ArrowLeft" :size="20" class="mr-2" />
@@ -60,7 +60,7 @@ const whatsappUrl = computed(() => {
             size="lg"
             variant="outline"
             as="a"
-            href="./sourcing-craft.html"
+            href="/sourcing-craft.html"
           >
             {{ locale === 'ar' ? 'تعرف على المصدر والحرفة' : 'Learn Sourcing & Craft' }}
             <SafeIcon name="BookOpen" :size="20" class="mr-2" />

@@ -38,7 +38,7 @@ export const HELP_ARTICLES: HelpArticleSummaryModel[] = [
     content_ar: "تفاصيل طريقة الإشعال الصحيحة، والمباخر الموصى بها، وطرق تحقيق أقصى استفادة من مدة الاحتراق الطويلة.",
     content_en: "Details on correct lighting methods, recommended mabkharas, and how to maximize the long burn time.",
     categoryIds: ["how_to_use"],
-    url: "./help-center.html?article=use_incense_sticks",
+    url: "/help-center.html?article=use_incense_sticks",
   },
   {
     id: "use_bakhoor",
@@ -49,7 +49,7 @@ export const HELP_ARTICLES: HelpArticleSummaryModel[] = [
     content_ar: "إرشادات استخدام المبخرة الكهربائية لضمان تسخين العود بشكل متساوٍ وتجنب الاحتراق السريع أو الروائح المحروقة.",
     content_en: "Guidelines for using the electric mabkhara to ensure even heating of the oud and avoid fast burning or smoky odors.",
     categoryIds: ["how_to_use"],
-    url: "./help-center.html?article=use_bakhoor",
+    url: "/help-center.html?article=use_bakhoor",
   },
   {
     id: "safety_guide",
@@ -60,7 +60,7 @@ export const HELP_ARTICLES: HelpArticleSummaryModel[] = [
     content_ar: "إعادة تأكيد على ضرورة التهوية الجيدة، وضرورة الإشراف، والاحتياطات ضد الحرائق والمواد القابلة للاشتعال. (راجع إشعار سلامة المنتج الرسمي للمزيد).",
     content_en: "Reiteration of the need for good ventilation, supervision, and precautions against fire and flammable materials. (Refer to the official Product Safety Notice for more).",
     categoryIds: ["safety_storage"],
-    url: "./help-center.html?article=safety_guide",
+    url: "/help-center.html?article=safety_guide",
   },
   {
     id: "b2c_inquiry_process",
@@ -71,7 +71,7 @@ export const HELP_ARTICLES: HelpArticleSummaryModel[] = [
     content_ar: "يتم توجيه الاستفسارات مباشرة إلى فريق المبيعات عبر الواتساب (رقم ${CONTACT_INFO.whatsappNumber})، حيث يمكنك تحديد المنتج والمدينة والكمية المتوقعة لبدء عملية الشراء التي تتم خارج الموقع.",
     content_en: "Inquiries are directed straight to the sales team via WhatsApp (number ${CONTACT_INFO.whatsappNumber}), where you can specify the product, city, and expected quantity to start the off-site purchase process.",
     categoryIds: ["inquiry_quotation"],
-    url: "./help-center.html?article=b2c_inquiry_process",
+    url: "/help-center.html?article=b2c_inquiry_process",
   },
   {
     id: "b2b_quotation_process",
@@ -82,7 +82,7 @@ export const HELP_ARTICLES: HelpArticleSummaryModel[] = [
     content_ar: "يجب ملء النموذج الموجود في صفحة 'الأعمال'. سيقوم فريق المبيعات B2B بالرد في غضون يوم عمل واحد عبر الواتساب لتقديم الكتالوج الكامل والبدء في تحديد خيارات التخصيص.",
     content_en: "You must fill out the form on the 'B2B: Hotels & Venues' page. The B2B sales team will respond within one business day via WhatsApp to provide the full catalog and begin customizing options.",
     categoryIds: ["inquiry_quotation"],
-    url: "./help-center.html?article=b2b_quotation_process",
+    url: "/help-center.html?article=b2b_quotation_process",
   },
   {
     id: "clean_mabkhara",
@@ -93,7 +93,7 @@ export const HELP_ARTICLES: HelpArticleSummaryModel[] = [
     content_ar: "تعليمات خطوة بخطوة لتنظيف المبخرة بعد الاستخدام، وإزالة بقايا البخور، والمحافظة على جودة التدفئة الكهربائية.",
     content_en: "Step-by-step instructions for cleaning the mabkhara after use, removing incense residue, and maintaining the electric heating element quality.",
     categoryIds: ["how_to_use"],
-    url: "./help-center.html?article=clean_mabkhara",
+    url: "/help-center.html?article=clean_mabkhara",
   },
   {
     id: "storage_tips",
@@ -104,7 +104,7 @@ export const HELP_ARTICLES: HelpArticleSummaryModel[] = [
     content_ar: "توضيح ظروف التخزين المثالية (درجة الحرارة، الرطوبة، الضوء)، وأهمية استخدام أوعية محكمة الإغلاق للحفاظ على العود والبخور.",
     content_en: "Explanation of ideal storage conditions (temperature, humidity, light), and the importance of using airtight containers to preserve oud and incense.",
     categoryIds: ["safety_storage"],
-    url: "./help-center.html?article=storage_tips",
+    url: "/help-center.html?article=storage_tips",
   },
   {
     id: "shipping_areas",
@@ -115,7 +115,7 @@ export const HELP_ARTICLES: HelpArticleSummaryModel[] = [
     content_ar: "تفاصيل مناطق التغطية لدول الخليج والشرق الأوسط، والخيارات المتاحة للشحن الدولي، والرسوم التقديرية لكل منطقة.",
     content_en: "Details on coverage areas for Gulf and Middle East countries, available international shipping options, and estimated fees for each region.",
     categoryIds: ["shipping_delivery"],
-    url: "./help-center.html?article=shipping_areas",
+    url: "/help-center.html?article=shipping_areas",
   },
   {
     id: "delivery_timeline",
@@ -126,7 +126,7 @@ export const HELP_ARTICLES: HelpArticleSummaryModel[] = [
     content_ar: "شرح أوقات المعالجة (طلبات B2C و B2B)، ومدة الشحن التقديرية لكل منطقة، وكيفية تتبع الطلب بعد الشحن.",
     content_en: "Explanation of processing times (B2C vs B2B orders), estimated shipping duration per region, and how to track your order after shipment.",
     categoryIds: ["shipping_delivery"],
-    url: "./help-center.html?article=delivery_timeline",
+    url: "/help-center.html?article=delivery_timeline",
   },
   {
     id: "traceability_process",
@@ -137,7 +137,7 @@ export const HELP_ARTICLES: HelpArticleSummaryModel[] = [
     content_ar: "وصف لعملية الاستخراج المسؤول، والعلاقات المباشرة مع الموردين، وشهادات المنشأ المتوفرة لضمان جودة وأصالة العود.",
     content_en: "Description of responsible sourcing, direct supplier relationships, and available certificates of origin to ensure oud quality and authenticity.",
     categoryIds: ["authenticity"],
-    url: "./help-center.html?article=traceability_process",
+    url: "/help-center.html?article=traceability_process",
   },
   {
     id: "identifying_oud_quality",
@@ -148,7 +148,7 @@ export const HELP_ARTICLES: HelpArticleSummaryModel[] = [
     content_ar: "دليل حول الرائحة، الملمس، ومدة بقاء العطر، وكيفية تجنب المنتجات المقلدة أو المغشوشة في السوق.",
     content_en: "A guide on scent, texture, and fragrance longevity, and how to avoid counterfeit or adulterated products in the market.",
     categoryIds: ["authenticity"],
-    url: "./help-center.html?article=identifying_oud_quality",
+    url: "/help-center.html?article=identifying_oud_quality",
   },
 ];
 

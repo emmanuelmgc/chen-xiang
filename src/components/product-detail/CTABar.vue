@@ -57,7 +57,7 @@ const getWhatsAppUrl = () => {
             variant="outline"
             size="sm"
             as="a"
-            href="./product-catalog-download.html"
+            href="/product-catalog-download.html"
           >
             <SafeIcon name="Download" :size="16" class="ml-1" />
             {{ locale === 'ar' ? 'تحميل' : 'Download' }}

@@ -64,7 +64,7 @@ const content = {
           size="lg" 
           class="bg-primary hover:bg-primary/90 text-primary-foreground font-bold"
           as="a"
-          href="./gift-sets-category.html#products"
+          href="/gift-sets-category.html#products"
         >
           {{ locale === 'ar' ? content.exploreBtn_ar : content.exploreBtn_en }}
           <SafeIcon name="ArrowLeft" :size="20" class="mr-2" />
@@ -74,7 +74,7 @@ const content = {
           variant="outline"
           class="border-white text-white hover:bg-white/10"
           as="a"
-          href="./b2b-hotels-venues.html"
+          href="/b2b-hotels-venues.html"
         >
           {{ locale === 'ar' ? content.customOrder_ar : content.customOrder_en }}
           <SafeIcon name="Gift" :size="20" class="mr-2" />

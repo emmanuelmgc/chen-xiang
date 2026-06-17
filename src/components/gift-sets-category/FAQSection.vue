@@ -69,7 +69,7 @@ const getAnswer = (faq: FAQModel) => {
         {{ locale === 'ar' ? 'هل لديك سؤال آخر؟' : 'Have another question?' }}
       </p>
       <a
-        href="./help-center.html"
+        href="/help-center.html"
         class="inline-flex items-center gap-2 text-primary font-bold hover:text-primary/80 transition-colors"
       >
         {{ locale === 'ar' ? 'اذهب إلى مركز المساعدة' : 'Go to Help Center' }}

@@ -22,10 +22,10 @@ const props = defineProps<Props>()
 const isHovered = ref(false)
 
 const categoryRoutes: Record<ProductType, string> = {
-  incense_stick: './incense-sticks-category.html',
-  bakhoor: './bakhoor-category.html',
-  mabkhara_accessory: './mabkhara-accessories-category.html',
-  gift_set: './gift-sets-category.html',
+  incense_stick: "/incense-sticks-category.html",
+  bakhoor: "/bakhoor-category.html",
+  mabkhara_accessory: "/mabkhara-accessories-category.html",
+  gift_set: "/gift-sets-category.html",
 }
 
 const getTitle = () => {

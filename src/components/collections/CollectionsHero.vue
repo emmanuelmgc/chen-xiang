@@ -59,7 +59,7 @@ onMounted(() => {
           size="lg"
           class="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-8"
           as="a"
-          href="./incense-sticks-category.html"
+          href="/incense-sticks-category.html"
         >
           {{ locale === 'ar' ? 'استكشف المجموعة' : 'Explore the Collection' }}
           <SafeIcon name="ArrowLeft" :size="20" class="mr-2" />
@@ -69,7 +69,7 @@ onMounted(() => {
           variant="outline"
           class="border-white text-white hover:bg-white/10 font-bold px-8"
           as="a"
-          href="./gift-sets-category.html"
+          href="/gift-sets-category.html"
         >
           {{ locale === 'ar' ? 'الهدايا الفاخرة' : 'Luxury Gifts' }}
           <SafeIcon name="Gift" :size="20" class="mr-2" />

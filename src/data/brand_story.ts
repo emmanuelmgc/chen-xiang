@@ -109,9 +109,9 @@ export const QUALITY_PROMISE_HIGHLIGHTS = {
   summary_en: "We are committed to improving transparency across sourcing, production, and product information. We focus on a genuine fragrance experience with careful attention to burn performance, aromatic consistency, and product safety.",
   // Links to compliance documents
   complianceLinks: [
-    { title_ar: "شهادات المنتج المادية", title_en: "Material Certificates", url: "./compliance-safety.html#material-safety" },
-    { title_ar: "إخلاء المسؤولية الطبية", title_en: "Medical Disclaimer", url: "./compliance-safety.html#safety-notice" },
-    { title_ar: "تتبع المصدر", title_en: "Source Traceability", url: "./sourcing-craft.html" },
+    { title_ar: "شهادات المنتج المادية", title_en: "Material Certificates", url: "/compliance-safety.html#material-safety" },
+    { title_ar: "إخلاء المسؤولية الطبية", title_en: "Medical Disclaimer", url: "/compliance-safety.html#safety-notice" },
+    { title_ar: "تتبع المصدر", title_en: "Source Traceability", url: "/sourcing-craft.html" },
   ]
 };
         

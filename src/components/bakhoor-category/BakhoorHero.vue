@@ -84,7 +84,7 @@ const content = {
           variant="outline"
           class="border-white text-white hover:bg-white/10"
           as="a"
-          href="./gift-sets-category.html"
+          href="/gift-sets-category.html"
         >
           {{ locale === 'ar' ? content.exploreGifts_ar : content.exploreGifts_en }}
           <SafeIcon name="Gift" :size="20" class="mr-2" />

@@ -104,7 +104,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
     badges: ['low_smoke', 'best_seller'],
     priceRange_ar: "٩٩ - ١٧٩ ريال",
     priceRange_en: "99 - 179 SAR",
-    detailUrl: "./product-detail/stick_sandal_classic.html",
+    detailUrl: "/product-detail/stick_sandal_classic.html",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("أعواد صندل كلاسيكية", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Classic Sandal Incense Sticks", 'en'),
     description_ar: "مصممة للبيئات الحضرية. توفر رائحة الصندل الكلاسيكية دون دخان ثقيل أو رماد متطاير، مثالية للمساحات الصغيرة والمكاتب.",
@@ -146,7 +146,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
     badges: ['gifting', 'new_arrival'],
     priceRange_ar: "٢٤٩ - ٣٩٩ ريال",
     priceRange_en: "249 - 399 SAR",
-    detailUrl: "./product-detail/bakhoor_oud_patchouli.html",
+    detailUrl: "/product-detail/bakhoor_oud_patchouli.html",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("بخور العود والباتشولي النبيلة", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Noble Oud & Patchouli Bakhoor", 'en'),
     description_ar: "مزيج فاخر من العود الهندي القديم ونفحات الباتشولي الترابية. مثالي لاستقبال الضيوف والمناسبات الرسمية، يوفر انتشاراً غنياً ودافئاً في المساحات الكبيرة.",
@@ -188,7 +188,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
     badges: ['best_seller'],
     priceRange_ar: "١٩٩ - ٤٩٩ ريال",
     priceRange_en: "199 - 499 SAR",
-    detailUrl: "./product-detail/mabkhara_electric_gold.html",
+    detailUrl: "/product-detail/mabkhara_electric_gold.html",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("مبخرة كهربائية بتصميم ذهبي", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Modern Gold Electric Mabkhara", 'en'),
     description_ar: "مبخرة كهربائية آمنة وفعالة، مثالية لحرق البخور ورقائق العود عند درجة حرارة مثالية تضمن ثبات الرائحة ونظافة التجربة.",
@@ -231,7 +231,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
     badges: ['gifting', 'new_arrival'],
     priceRange_ar: "٤٩٩ - ٧٩٩ ريال",
     priceRange_en: "499 - 799 SAR",
-    detailUrl: "./product-detail/gift_eid_deluxe.html",
+    detailUrl: "/product-detail/gift_eid_deluxe.html",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("طقم هدايا العيد الفاخر", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Deluxe Eid Gift Set", 'en'),
     description_ar: "هدية فاخرة ومصممة خصيصاً للاحتفال بالعيد. يحتوي على أعواد بخور منخفضة الدخان، رقائق عود مختارة، ومبخرة صغيرة محمولة. مثالي لتقديم إهداء لا يُنسى.",
@@ -274,7 +274,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
     badges: ['low_smoke', 'new_arrival'],
     priceRange_ar: "١٢٩ - ٢٢٩ ريال",
     priceRange_en: "129 - 229 SAR",
-    detailUrl: "./product-detail/stick_arabian_nights.html",
+    detailUrl: "/product-detail/stick_arabian_nights.html",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("أعواد ليالي العربية", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Arabian Nights Incense Sticks", 'en'),
     description_ar: "عود حار مع نفحات من التوابل الشرقية. يوفر تجربة دافئة وغامضة، مع الحفاظ على مستوى الدخان منخفضاً ليناسب الاستخدام المسائي والهادئ.",
@@ -317,7 +317,7 @@ export const MOCK_PRODUCTS_DATA: ProductFullModel[] = [
     badges: ['best_seller'],
     priceRange_ar: "٧٩ - ١٤٩ ريال",
     priceRange_en: "79 - 149 SAR",
-    detailUrl: "./product-detail/mabkhara_ceramic_tray.html",
+    detailUrl: "/product-detail/mabkhara_ceramic_tray.html",
     whatsappInquiryUrl_ar: getWhatsAppInquiryUrl("صينية سيراميك لجمع الرماد", 'ar'),
     whatsappInquiryUrl_en: getWhatsAppInquiryUrl("Ceramic Ash Tray and Holder", 'en'),
     description_ar: "صينية سيراميك يدوية الصنع بلون الرمال الدافئ، مثالية لتثبيت أعواد البخور وجمع الرماد المتساقط بأناقة ونظافة.",
@@ -418,7 +418,7 @@ export const PRODUCT_CATEGORIES: Record<ProductType, CategoryPageModel> = {
       content_en: "Traditional sticks can be smoke-heavy and unsuitable for small spaces or offices. Our sticks use cold processing technology for a pure scent without irritation.",
       linkText_ar: "تعرّف على استخدامها الآمن",
       linkText_en: "Learn Safe Usage",
-      linkUrl: "./help-center.html#how-to-use-incense", 
+      linkUrl: "/help-center.html#how-to-use-incense", 
     }
   },
   bakhoor: {
@@ -440,7 +440,7 @@ export const PRODUCT_CATEGORIES: Record<ProductType, CategoryPageModel> = {
       content_en: "Bakhoor is an integral part of Gulf hospitality culture. It is used to honor guests and conclude gatherings, symbolizing respect and appreciation.",
       linkText_ar: "استكشف طقوس الضيافة",
       linkText_en: "Explore Hospitality Rituals",
-      linkUrl: "./journal.html#hospitality-rituals", 
+      linkUrl: "/journal.html#hospitality-rituals", 
     }
   },
   mabkhara_accessory: {
@@ -462,7 +462,7 @@ export const PRODUCT_CATEGORIES: Record<ProductType, CategoryPageModel> = {
       content_en: "You should choose the mabkhara based on the type of incense: Electric for oud chips, and ceramic or metal for sticks.",
       linkText_ar: "شاهد دليل الأدوات",
       linkText_en: "View our Tool Guide",
-      linkUrl: "./help-center.html#accessory-guide",
+      linkUrl: "/help-center.html#accessory-guide",
     }
   },
   gift_set: {
@@ -484,7 +484,7 @@ export const PRODUCT_CATEGORIES: Record<ProductType, CategoryPageModel> = {
       content_en: "You can customize our gift sets to suit the recipient's taste and occasion, from selecting the aroma to the card font.",
       linkText_ar: "للاستفسارات الخاصة بالهدايا",
       linkText_en: "Gifting Inquiry",
-      linkUrl: "./gift-landing.html", 
+      linkUrl: "/gift-landing.html", 
     }
   }
 };

@@ -18,11 +18,11 @@ const isSearchOpen = ref(false)
 const whatsappUrl = computed(() => `https://wa.me/${CONTACT_INFO.whatsappNumber}`)
 
 const navItems = [
-  { label_ar: 'المتجر', label_en: 'Collections', href: './collections.html' },
-  { label_ar: 'الهدايا', label_en: 'Gifts', href: './gift-sets-category.html' },
-  { label_ar: 'الأعمال', label_en: 'B2B', href: './b2b-hotels-venues.html' },
-  { label_ar: 'من نحن', label_en: 'About', href: './about.html' },
-  { label_ar: 'المساعدة', label_en: 'Help', href: './help-center.html' },
+  { label_ar: 'المتجر', label_en: 'Collections', href: '/collections.html' },
+  { label_ar: 'الهدايا', label_en: 'Gifts', href: '/gift-sets-category.html' },
+  { label_ar: 'الأعمال', label_en: 'B2B', href: '/b2b-hotels-venues.html' },
+  { label_ar: 'من نحن', label_en: 'About', href: '/about.html' },
+  { label_ar: 'المساعدة', label_en: 'Help', href: '/help-center.html' },
 ]
 
 onMounted(() => {
@@ -74,7 +74,7 @@ const getNavLabel = (item: typeof navItems[0]) => {
 
         <!-- Logo (Center) -->
         <div class="flex-1 flex justify-center md:justify-start">
-          <a href="./collections.html" class="flex items-center gap-2">
+          <a href="/collections.html" class="flex items-center gap-2">
             <span class="text-2xl md:text-3xl font-bold text-foreground">
               {{ locale === 'ar' ? 'نفحة' : 'Nafha' }}
             </span>

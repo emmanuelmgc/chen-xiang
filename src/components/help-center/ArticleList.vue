@@ -18,7 +18,7 @@ const filteredArticles = computed(() => {
 })
 
 function getArticleUrl(articleId: string): string {
-  return `./help-center.html?article=${articleId}`
+  return `/help-center.html?article=${articleId}`
 }
 </script>
 

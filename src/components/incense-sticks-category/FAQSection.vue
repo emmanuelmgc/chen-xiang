@@ -55,7 +55,7 @@ const getAnswer = (faq: FAQModel) => {
         <Button
           variant="outline"
           as="a"
-          href="./help-center.html"
+          href="/help-center.html"
           class="whitespace-nowrap"
         >
           {{ locale === 'ar' ? 'عرض جميع الأسئلة' : 'View All Questions' }}

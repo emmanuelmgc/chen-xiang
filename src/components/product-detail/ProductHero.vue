@@ -159,7 +159,7 @@ onMounted(() => {
           variant="outline"
           class="w-full"
           as="a"
-          href="./product-catalog-download.html"
+          href="/product-catalog-download.html"
         >
           <SafeIcon name="Download" :size="20" class="ml-2" />
           {{ locale === 'ar' ? 'تحميل الكتالوج والمواصفات' : 'Download Catalog & Specs' }}

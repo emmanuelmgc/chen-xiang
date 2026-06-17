@@ -69,7 +69,7 @@ const content = {
             size="lg" 
             class="bg-primary hover:bg-primary/90 text-white font-semibold"
             as="a"
-            href="./mabkhara-accessories-category.html"
+            href="/mabkhara-accessories-category.html"
           >
             {{ locale === 'ar' ? content.exploreBtn_ar : content.exploreBtn_en }}
           </Button>
@@ -78,7 +78,7 @@ const content = {
             variant="outline"
             class="border-white text-white hover:bg-white/10 font-semibold"
             as="a"
-            href="./help-center.html"
+            href="/help-center.html"
           >
             {{ locale === 'ar' ? content.learnMore_ar : content.learnMore_en }}
           </Button>

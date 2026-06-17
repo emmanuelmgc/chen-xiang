@@ -37,11 +37,11 @@ export const COMPANY_IDENTITY: CompanyIdentityModel = {
 };
 
 export const LEGAL_POLICIES_LINKS: PolicyLinkModel[] = [
-  { id: "privacy", title_ar: "سياسة الخصوصية وملفات تعريف الارتباط", title_en: "Privacy & Cookie Policy", url: "./privacy-cookie-policy.html" },
-  { id: "terms", title_ar: "شروط الخدمة", title_en: "Terms of Service", url: "./terms-of-service.html" },
-  { id: "shipping", title_ar: "سياسة الشحن والتسليم", title_en: "Shipping & Delivery Policy", url: "./help-center.html#shipping-delivery" },
-  { id: "returns", title_ar: "سياسة الإرجاع والاستبدال", title_en: "Returns & Exchanges Policy", url: "./help-center.html#returns-exchanges" },
-  { id: "safety", title_ar: "إشعار سلامة المنتج", title_en: "Product Safety Notice", url: "./product-safety-notice.html" },
+  { id: "privacy", title_ar: "سياسة الخصوصية وملفات تعريف الارتباط", title_en: "Privacy & Cookie Policy", url: "/privacy-cookie-policy.html" },
+  { id: "terms", title_ar: "شروط الخدمة", title_en: "Terms of Service", url: "/terms-of-service.html" },
+  { id: "shipping", title_ar: "سياسة الشحن والتسليم", title_en: "Shipping & Delivery Policy", url: "/help-center.html#shipping-delivery" },
+  { id: "returns", title_ar: "سياسة الإرجاع والاستبدال", title_en: "Returns & Exchanges Policy", url: "/help-center.html#returns-exchanges" },
+  { id: "safety", title_ar: "إشعار سلامة المنتج", title_en: "Product Safety Notice", url: "/product-safety-notice.html" },
 ];
 
 export const POLICY_CONTENTS: Record<string, PolicyContentModel> = {

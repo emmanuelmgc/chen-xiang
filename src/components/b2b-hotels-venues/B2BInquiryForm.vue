@@ -67,7 +67,7 @@ async function handleSubmit() {
     await new Promise(resolve => setTimeout(resolve, 1000))
     
     // Redirect to success page
-    window.location.href = './b2b-form-success.html'
+    window.location.href="/b2b-form-success.html"
   } catch (error) {
     toast.error(locale.value === 'ar' ? 'حدث خطأ أثناء إرسال النموذج' : 'An error occurred while submitting the form')
     isSubmitting.value = false

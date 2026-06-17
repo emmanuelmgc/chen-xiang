@@ -30,7 +30,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   items: () => [
-    { label_ar: 'الرئيسية', label_en: 'Home', href: './collections.html' }
+    { label_ar: 'الرئيسية', label_en: 'Home', href: '/collections.html' }
   ]
 })
 

@@ -39,23 +39,23 @@ const handleSubscribe = async () => {
 }
 
 const serviceLinks = [
-  { label_ar: 'كيفية الاستخدام', label_en: 'How to Use', href: './help-center.html' },
-  { label_ar: 'السلامة والتخزين', label_en: 'Safety & Storage', href: './help-center.html' },
-  { label_ar: 'الاستفسار والتسعير', label_en: 'Inquiries & Pricing', href: './help-center.html' },
+  { label_ar: 'كيفية الاستخدام', label_en: 'How to Use', href: '/help-center.html' },
+  { label_ar: 'السلامة والتخزين', label_en: 'Safety & Storage', href: '/help-center.html' },
+  { label_ar: 'الاستفسار والتسعير', label_en: 'Inquiries & Pricing', href: '/help-center.html' },
 ]
 
 const companyLinks = [
-  { label_ar: 'من نحن', label_en: 'About Us', href: './about.html' },
-  { label_ar: 'قصتنا', label_en: 'Our Story', href: './our-story.html' },
-  { label_ar: 'المصدر والحرفة', label_en: 'Sourcing & Craft', href: './sourcing-craft.html' },
-  { label_ar: 'وعد الجودة', label_en: 'Quality Promise', href: './quality-promise.html' },
+  { label_ar: 'من نحن', label_en: 'About Us', href: '/about.html' },
+  { label_ar: 'قصتنا', label_en: 'Our Story', href: '/our-story.html' },
+  { label_ar: 'المصدر والحرفة', label_en: 'Sourcing & Craft', href: '/sourcing-craft.html' },
+  { label_ar: 'وعد الجودة', label_en: 'Quality Promise', href: '/quality-promise.html' },
 ]
 
 const legalLinks = [
-  { label_ar: 'الخصوصية وملفات تعريف الارتباط', label_en: 'Privacy & Cookie Policy', href: './privacy-cookie-policy.html' },
-  { label_ar: 'شروط الخدمة', label_en: 'Terms of Service', href: './terms-of-service.html' },
-  { label_ar: 'إشعار سلامة المنتج', label_en: 'Product Safety Notice', href: './product-safety-notice.html' },
-  { label_ar: 'معلومات الشركة', label_en: 'Company Information', href: './company-identity-card.html' },
+  { label_ar: 'الخصوصية وملفات تعريف الارتباط', label_en: 'Privacy & Cookie Policy', href: '/privacy-cookie-policy.html' },
+  { label_ar: 'شروط الخدمة', label_en: 'Terms of Service', href: '/terms-of-service.html' },
+  { label_ar: 'إشعار سلامة المنتج', label_en: 'Product Safety Notice', href: '/product-safety-notice.html' },
+  { label_ar: 'معلومات الشركة', label_en: 'Company Information', href: '/company-identity-card.html' },
 ]
 
 const socialLinks = CONTACT_INFO.socialMedia.map(s => ({
@@ -166,16 +166,16 @@ const getLinkLabel = (item: typeof serviceLinks[0]) => {
     <div v-else class="container mx-auto px-4 py-6">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
-          <a href="./about.html" class="text-sm text-muted-foreground hover:text-primary transition-colors">
+          <a href="/about.html" class="text-sm text-muted-foreground hover:text-primary transition-colors">
             {{ locale === 'ar' ? 'من نحن' : 'About' }}
           </a>
-          <a href="./help-center.html" class="text-sm text-muted-foreground hover:text-primary transition-colors">
+          <a href="/help-center.html" class="text-sm text-muted-foreground hover:text-primary transition-colors">
             {{ locale === 'ar' ? 'المساعدة' : 'Help' }}
           </a>
-          <a href="./compliance-safety.html" class="text-sm text-muted-foreground hover:text-primary transition-colors">
+          <a href="/compliance-safety.html" class="text-sm text-muted-foreground hover:text-primary transition-colors">
             {{ locale === 'ar' ? 'الامتثال والسلامة' : 'Compliance & Safety' }}
           </a>
-          <a href="./contact.html" class="text-sm text-muted-foreground hover:text-primary transition-colors">
+          <a href="/contact.html" class="text-sm text-muted-foreground hover:text-primary transition-colors">
             {{ locale === 'ar' ? 'اتصل بنا' : 'Contact' }}
           </a>
         </div>

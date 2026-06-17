@@ -59,7 +59,7 @@ const whatsappUrl = `https://wa.me/${CONTACT_INFO.whatsappNumber.replace('+', ''
             size="lg"
             class="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             as="a"
-            href="./collections.html"
+            href="/collections.html"
           >
             {{ locale === 'ar' ? content.exploreBtn_ar : content.exploreBtn_en }}
             <SafeIcon name="ArrowLeft" :size="20" class="mr-2" />

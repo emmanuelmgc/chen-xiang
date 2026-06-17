@@ -40,7 +40,7 @@ onMounted(() => {
           <!-- Primary CTA: Learn Sourcing -->
           <Button 
             as="a"
-            href="./sourcing-craft.html"
+            href="/sourcing-craft.html"
             size="lg"
             class="bg-primary hover:bg-primary/90 text-primary-foreground"
           >
@@ -51,7 +51,7 @@ onMounted(() => {
           <!-- Secondary CTA: Quality Promise -->
           <Button 
             as="a"
-            href="./quality-promise.html"
+            href="/quality-promise.html"
             variant="outline"
             size="lg"
             class="border-primary text-primary hover:bg-primary/5"
@@ -71,7 +71,7 @@ onMounted(() => {
           </p>
           <Button 
             as="a"
-            href="./collections.html"
+            href="/collections.html"
             size="lg"
             class="bg-accent hover:bg-accent/90 text-accent-foreground"
           >

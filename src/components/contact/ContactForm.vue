@@ -254,7 +254,7 @@ const handleSubmit = async () => {
     <!-- Form Note -->
     <p class="text-xs text-muted-foreground text-center">
       {{ labels.privacyNote }}
-      <a href="./privacy-cookie-policy.html" class="text-primary hover:underline">
+      <a href="/privacy-cookie-policy.html" class="text-primary hover:underline">
         {{ labels.privacyLink }}
       </a>
     </p>

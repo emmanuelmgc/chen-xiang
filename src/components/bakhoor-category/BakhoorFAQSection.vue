@@ -78,7 +78,7 @@ const getAnswer = (faq: FAQModel) => {
           variant="outline"
           size="lg"
           as="a"
-          href="./help-center.html"
+          href="/help-center.html"
         >
           {{ locale === 'ar' ? 'عرض جميع الأسئلة الشائعة' : 'View All FAQs' }}
           <SafeIcon name="HelpCircle" :size="20" class="mr-2" />
