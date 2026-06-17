@@ -305,12 +305,12 @@ describe('Multilingual Data Integrity Tests', () => {
   })
 
   describe('Contact Info Integrity', () => {
-    it('WhatsApp number should be valid format', () => {
-      expect(CONTACT_INFO.whatsappNumber).toMatch(/^\+966\d{10}$/)
+    it('WhatsApp number should be valid international format', () => {
+      expect(CONTACT_INFO.whatsappNumber).toMatch(/^\+\d{7,15}$/)
     })
 
-    it('phone number should be valid format', () => {
-      expect(CONTACT_INFO.phoneNumber).toMatch(/^\+966\d{10}$/)
+    it('phone number should be valid international format', () => {
+      expect(CONTACT_INFO.phoneNumber).toMatch(/^\+\d{7,15}$/)
     })
 
     it('email should be valid format', () => {

@@ -1,4 +1,6 @@
 ---
+import { CONTACT_INFO } from '../data/contact_info';
+
 interface Props {
   title?: string;
   description?: string;
@@ -61,7 +63,7 @@ const currentUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl).href;
       "logo": "https://nafha.life/favicon.svg",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+9661123456789",
+        "telephone": CONTACT_INFO.phoneNumber,
         "contactType": "customer service",
         "availableLanguage": ["Arabic", "English"]
       },

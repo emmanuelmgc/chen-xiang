@@ -23,7 +23,7 @@ const specsData = computed(() => [
   { label: locale.value === 'ar' ? 'الوزن' : 'Weight', value: locale.value === 'ar' ? props.product.specs.weight_ar : props.product.specs.weight_en },
   { label: locale.value === 'ar' ? 'وقت الحرق' : 'Burn Time', value: locale.value === 'ar' ? props.product.specs.burnTime_ar : props.product.specs.burnTime_en },
   { label: locale.value === 'ar' ? 'مستوى الدخان' : 'Smoke Level', value: locale.value === 'ar' ? props.product.specs.smokeLevel_ar : props.product.specs.smokeLevel_en },
-  { label: locale.value === 'ar' ? 'المساحة المناسبة' : 'Applicable Space', value: locale.value === 'ar' ? props.product.specs.applicableSpace_ar : props.product.specs.applicableSpace_en },
+  { label: locale.value === 'ar' ? 'الفضاء الموصى به' : 'Recommended Room Size', value: locale.value === 'ar' ? props.product.specs.recommendedRoomSize_ar : props.product.specs.recommendedRoomSize_en },
   { label: locale.value === 'ar' ? 'المادة' : 'Material', value: locale.value === 'ar' ? props.product.specs.material_ar : props.product.specs.material_en },
 ])
 </script>

@@ -4,6 +4,7 @@ import type { CategoryPageModel } from '@/data/products'
 import { Button } from '@/components/ui/button'
 import SafeIcon from '@/components/common/SafeIcon.vue'
 import { useLanguage } from '@/lib/useLanguage'
+import { CONTACT_INFO } from '@/data/contact_info'
 
 const { locale, initLanguage } = useLanguage()
 initLanguage()
@@ -21,6 +22,8 @@ const content = {
   whatsappBtn_ar: 'تواصل عبر واتساب',
   whatsappBtn_en: 'Contact via WhatsApp',
 }
+
+const whatsappUrl = `https://wa.me/${CONTACT_INFO.whatsappNumber.replace('+', '')}`
 </script>
 
 <template>
@@ -68,7 +71,9 @@ const content = {
             variant="outline"
             class="border-white text-white hover:bg-white/10"
             as="a"
-            href="./contact-whatsapp-prefill.html"
+            :href="whatsappUrl"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {{ locale === 'ar' ? content.whatsappBtn_ar : content.whatsappBtn_en }}
             <SafeIcon name="MessageCircle" :size="20" class="mr-2" />

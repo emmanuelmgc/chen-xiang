@@ -70,14 +70,14 @@ onMounted(() => {
           </div>
         </div>
 
-        <!-- VAT / TRN -->
-        <div class="flex gap-3">
+        <!-- VAT / TRN — hidden until owner provides real number -->
+        <!-- <div class="flex gap-3">
           <SafeIcon name="FileText" :size="20" class="text-muted-foreground shrink-0 mt-0.5" />
           <div>
             <p class="text-sm font-medium text-foreground">{{ labels.vatTrn }}</p>
             <p class="text-sm text-muted-foreground mt-1 font-mono">{{ COMPANY_IDENTITY.vatTrn }}</p>
           </div>
-        </div>
+        </div> -->
 
         <!-- Contact Email -->
         <div class="flex gap-3">

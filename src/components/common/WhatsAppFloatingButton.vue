@@ -25,7 +25,7 @@ const message = computed(() => {
 })
 
 const whatsappUrl = computed(() => {
-  return `https://wa.me/${props.phoneNumber}?text=${encodeURIComponent(message.value)}`
+  return `https://wa.me/${props.phoneNumber.replace('+', '')}?text=${encodeURIComponent(message.value)}`
 })
 
 const ariaLabel = computed(() => {

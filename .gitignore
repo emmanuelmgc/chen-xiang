@@ -25,6 +25,12 @@ Thumbs.db
 *.swp
 *.swo
 
+# Astro build cache
+.astro/
+
+# pnpm workspace config (project uses npm on Vercel)
+pnpm-workspace.yaml
+
 # Backup files
 code.rar
 *.rar

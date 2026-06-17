@@ -57,7 +57,7 @@ const getContactValue = () => {
 const getContactHref = () => {
   switch (props.type) {
     case 'whatsapp':
-      return `https://wa.me/${CONTACT_INFO.whatsappNumber}`
+      return `https://wa.me/${CONTACT_INFO.whatsappNumber.replace('+', '')}`
     case 'phone':
       return `tel:${CONTACT_INFO.phoneNumber}`
     case 'email':
@@ -121,9 +121,21 @@ const getButtonLabel = () => {
     </p>
     
     <!-- Contact Value -->
-    <p class="text-base font-medium text-foreground mb-6 break-all">
+    <p class="text-base font-medium text-foreground mb-4 break-all" dir="ltr">
       {{ getContactValue() }}
     </p>
+    
+    <!-- WhatsApp QR Code -->
+    <div v-if="type === 'whatsapp'" class="mb-4 flex flex-col items-center gap-2">
+      <img 
+        src="/whatsapp-qr.jpg"
+        :alt="locale === 'ar' ? 'رمز QR للواتساب' : 'WhatsApp QR Code'"
+        class="w-28 h-28 rounded-lg border border-border/30 object-cover"
+      />
+      <p class="text-xs text-muted-foreground text-center">
+        {{ locale === 'ar' ? 'امسح لفتح الواتساب مباشرة' : 'Scan to open WhatsApp directly' }}
+      </p>
+    </div>
     
     <!-- CTA Button -->
     <Button 

@@ -1,4 +1,5 @@
 
+
         
 export interface ContactInfoModel {
   whatsappNumber: string;
@@ -23,23 +24,10 @@ export interface SocialMediaModel {
   url: string;
 }
 
-/**
- * OWNER_CONFIRMATION_REQUIRED
- * 
- * The following fields need real data from the site owner:
- * - whatsappNumber: Currently "+96650XXXXXXX" (placeholder)
- * - phoneNumber: Currently "+96611XXXXXXX" (placeholder)
- * - googleMapsUrl: Currently "https://maps.app.goo.gl/XXXXXXX" (placeholder)
- * - catalogDownloadUrl: Currently "http://example.com/NAFHA_Catalog_2026.pdf" (placeholder)
- * 
- * Do NOT invent or fabricate real contact information.
- * Ask the site owner to provide the actual values.
- */
-
 export const CONTACT_INFO: ContactInfoModel = {
-  whatsappNumber: "+9665012345678", // OWNER_CONFIRMATION_REQUIRED - Replace with real WhatsApp number (valid format: +966 + 10 digits)
+  whatsappNumber: "+34667340223",
   email: "inquiry@nafha-oud.com",
-  phoneNumber: "+9661123456789", // OWNER_CONFIRMATION_REQUIRED - Replace with real phone number (valid format: +966 + 10 digits)
+  phoneNumber: "+8613631333154",
   addressLine1_ar: "الرياض، المملكة العربية السعودية",
   addressLine1_en: "Riyadh, Kingdom of Saudi Arabia",
   googleMapsUrl: "", // OWNER_CONFIRMATION_REQUIRED - Provide real Google Maps URL
@@ -69,7 +57,7 @@ export function getWhatsAppInquiryUrl(productName: string, lang: 'ar' | 'en'): s
     ? CONTACT_INFO.baseMessage_productInquiry_ar.replace("[PRODUCT_NAME]", productName)
     : CONTACT_INFO.baseMessage_productInquiry_en.replace("[PRODUCT_NAME]", productName);
     
-  return `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent(baseMessage)}`;
+  return `https://wa.me/${CONTACT_INFO.whatsappNumber.replace('+', '')}?text=${encodeURIComponent(baseMessage)}`;
 }
         
       
