@@ -31,7 +31,7 @@ export const COMPANY_IDENTITY: CompanyIdentityModel = {
   registeredName_en: "NAFHA Oud Trading Company",
   registeredAddress_ar: CONTACT_INFO.addressLine1_ar,
   registeredAddress_en: CONTACT_INFO.addressLine1_en,
-  vatTrn: "KSA-VAT-30005XXX", // Mock VAT number
+  vatTrn: "", // OWNER_CONFIRMATION_REQUIRED: real VAT/TRN number pending
   contactEmail: CONTACT_INFO.email,
   contactPhone: CONTACT_INFO.phoneNumber,
 };
@@ -39,8 +39,8 @@ export const COMPANY_IDENTITY: CompanyIdentityModel = {
 export const LEGAL_POLICIES_LINKS: PolicyLinkModel[] = [
   { id: "privacy", title_ar: "سياسة الخصوصية وملفات تعريف الارتباط", title_en: "Privacy & Cookie Policy", url: "./privacy-cookie-policy.html" },
   { id: "terms", title_ar: "شروط الخدمة", title_en: "Terms of Service", url: "./terms-of-service.html" },
-  { id: "shipping", title_ar: "سياسة الشحن والتسليم", title_en: "Shipping & Delivery Policy (Placeholder)", url: "./help-center.html#shipping-delivery" },
-  { id: "returns", title_ar: "سياسة الإرجاع والاستبدال", title_en: "Returns & Exchanges Policy (Placeholder)", url: "./help-center.html#returns-exchanges" },
+  { id: "shipping", title_ar: "سياسة الشحن والتسليم", title_en: "Shipping & Delivery Policy", url: "./help-center.html#shipping-delivery" },
+  { id: "returns", title_ar: "سياسة الإرجاع والاستبدال", title_en: "Returns & Exchanges Policy", url: "./help-center.html#returns-exchanges" },
   { id: "safety", title_ar: "إشعار سلامة المنتج", title_en: "Product Safety Notice", url: "./product-safety-notice.html" },
 ];
 

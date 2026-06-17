@@ -53,7 +53,7 @@ onMounted(() => {
       >
         <img
           :src="allImages[currentImageIndex]"
-          :alt="product.name_ar"
+          :alt="locale === 'ar' ? product.name_ar : product.name_en"
           class="w-full h-full object-cover transition-transform duration-300"
           :class="isZoomed ? 'scale-150' : 'scale-100'"
         />

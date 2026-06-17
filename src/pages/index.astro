@@ -1,14 +1,4 @@
 ---
-// 根页面重定向到产品系列总览页
-import BaseLayout from '@/layouts/BaseLayout.astro'
+// 根页面重定向到产品系列总览页（服务端 301 重定向，SEO 友好）
+return Astro.redirect('/collections.html', 301);
 ---
-
-<BaseLayout 
-  title="NAFHA | نفحة - Premium Oud & Incense"
-  description="NAFHA offers premium low-smoke Oud products for modern hospitality. Explore our collections of incense sticks, bakhoor, and luxury gift sets."
->
-  <script is:inline>
-    window.location.href = './collections.html';
-  </script>
-  <p class="text-center p-8">Redirecting to <a href="./collections.html">collections</a>...</p>
-</BaseLayout>
